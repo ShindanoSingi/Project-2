@@ -1,19 +1,15 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly)
 
-# Project #2: Building Your First Full-Stack Application
+# Project #2: Building Your First Backend Application
 
-## Attendance
-We will be holding stand ups with instructors at **5:30PM CST (Tuesday/Wednesday) and 11:00AM CST (Saturday)** to have a daily check on the progress your application.
-
-There are no full day classes during project weeks, but we expect you to be working on your project from at least **5:30PM - 9:45PM CST (Tues/Wed)** and at least **9AM - 5PM CST (Sat)** during class days and be available during that time for TA hours or any meetings with instructors as needed. You are STILL required to show up to Outcomes during project weeks.   
-
-We also will take attendance during project week, as follows:
-  - **Friday June 11th**: Project Proposals due 7pm CST (see below for more info on this).
-  - **Saturday, June 12th**: You're required to meet up with your squad leader at 1:30pm CST and get approved for your project idea.
-  - **Daily (Each Class Day)**: Your attendance will be taken during **STANDUP meetings starting Tuesday 15th**. 
-  - **Tuesday, June 29th**: Project presentation day! You're required to be in the class zoom starting at 5:30 PM CST
-
-_Failure to make an attendance check will result in an unexcused absence for both morning or/and afternoon for that day_.
+## RoadMap
+ * Intro - 4/9
+ * Proposals Due - 4/13
+ * Proposal Finalized - 4/16
+ * Attend initial mandatory standup - 4/16
+ * Attend standups or use progress form - Tu/We/Sa
+ * Attend Office Hours at least once
+ * Submit Your Work + Present - 4/30
 
 ## Technical Requirements
 For this project, you will be making a full CRUD app using the technologies outlined below. When thinking of an app idea, try to frame the project in terms of trying to solve a "problem" and think about the purpose of the app, who would use it, etc. The problem doesn't have to be anything intense and can be something small and simple! For example:
@@ -22,7 +18,12 @@ For this project, you will be making a full CRUD app using the technologies outl
   >**General App Idea/Purpose:** An app that allows me to catalogue all my pins by category <br>
   >**Who Would Use It:** Pin collectors
   
-You will use Handlebars, or EJS to build templates that do server-side rendering, or build a frontend that uses fetch or axios and DOM-manipulation based on JSON from your backend (in the style of the [GAphy app](https://git.generalassemb.ly/flex-323/express-api-lab))
+You will use Handlebars, or EJS to build templates that do server-side rendering, or build a frontend that uses fetch or axios and DOM-manipulation based on JSON from your backend (in the style of the [GAphy app](https://git.generalassemb.ly/flex-125/express-api-lab))
+
+Do Not Do Non-CRUD Applications Such As:
+ - Games
+ - Portfolio, or presentational pages
+ - Marketing or content oriented websites
 
 ### &#128994; Proposals:
 #### Proposal Requirements
@@ -35,16 +36,16 @@ You will use Handlebars, or EJS to build templates that do server-side rendering
 
 You will meet with an squad leader to get your app idea approved. Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas.
 
-**Submit Project proposal [here](https://git.generalassemb.ly/flex-323/project-2/issues/new?assignees=&labels=&template=project-proposal-submission.md&title=Your+Name+%2B+Squad+Lead) by Friday June 11th 7:00pm CST.**
+**Submit Project proposal [here](https://git.generalassemb.ly/staging-125/project-2/issues/new?assignees=&labels=&template=project-proposal-submission.md&title=Your+Name+%7C+Section+Color) by Tuesday April 13 6:00pm ET.**
 
 ### &#x1F534; Mandatory to pass:
 #### MVP - Minimum Viable Product
 
-* A working full-stack application, built by you, using **Node.js, Mongoose, Express and EJS || HBS**
+* A working full-stack application, built by you, using **Node.js, Mongoose, Express and {EJS || HBS || DOM manipulation}**
 * Adhere to the **MVC** file structure: Models, Views, Controllers
-* At least one model with all 7 **RESTful routes** and full **CRUD**.
-* :heavy_exclamation_mark: A git repository **not inside the class repo**.  
-* At **least one** Github commit per day of working on the project.
+* At least one model with all 5 **RESTful routes** and full **CRUD**.
+* :heavy_exclamation_mark: A git repository **not inside the class repo**.  (to github.com)
+* At **least one** Github commit per "day of class".
 * **Be deployed online** and accessible to the public via **Heroku**
 * **A ``README.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
 * Inside Your `README.md`:
@@ -53,20 +54,19 @@ You will meet with an squad leader to get your app idea approved. Be sure to wri
     * Have a **link to your hosted working app**.
 
 ### &#x1F535; Stretch Goals (Not Mandatory):
-#### Recommended Features
 
-* Add a second model that are associated in some way (e.g. one-to-many, many-to-many, etc) 
-* Use EJS or HBS views
+* Add a second model that are associated in some way (e.g. one-to-many, many-to-many, etc) see [this lesson for notes](https://git.generalassemb.ly/flex-125/express-apis-json#crud-with-two-related-models)
 * Include portfolio-quality styling
 * Use a CSS framework like Skeleton, Bootstrap, Materialize, etc...
 * Use a third party API
 * Incorporate **Google Maps**
-* Allow users to upload files with **Multer**
-* Enable real time communication with **socket.io**
+* Allow users to upload files with **Multer** (note, this can be tricky with heroku)
+* Enable user authentication with **passport.js**
 
 ## GitHub Project Repo
 
 :heavy_exclamation_mark: **REMEMBER:** For all projects, you will be creating the new repo's on [GitHub](https://github.com/), **not** GitHub Enterprise!
+
 
 ## Setup for Heroku Deployment
 
@@ -75,7 +75,7 @@ We will walk through deploying your app to production next week. We'll use a ser
 
 [Heroku Node App Deployment Docs](https://devcenter.heroku.com/categories/nodejs-support)
 
-To prepare for the Heroku deployment lesson on **June 12th**.
+To prepare for the Heroku deployment lesson on **April 16th**.
 
 
 ## Technical Demonstration
@@ -92,15 +92,13 @@ All projects will be presented to the class. Your presentation should be:
 
 You will be sharing your app and your code.  Be prepared to answer questions from the instructors and other students.
 
-**Saturday, June 12th - Mandatory**<br>
-You will meet with an instructor to get your app idea approved. Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas.
 
 ## How to Submit Your Project
 
 
-Your project is due on Tuesday, June 29h at 5:00 PM CST. You will present your project and show your code to classmates and instructors.
+Your project is due on saturday, April 30 at 9:00 AM ET. You will present your project and show your code to classmates and instructors.
 
-:heavy_check_mark: Submit your project by adding an issue to [this repo](https://git.generalassemb.ly/flex-323/project2-gallery/issues).
+:heavy_check_mark: Submit your project by adding an issue to [this repo](https://git.generalassemb.ly/flex-125/project2-gallery/issues).
 
 Your issue should include:
 
@@ -119,7 +117,7 @@ We ask that you take the following steps when dealing with technical questions..
 - Use the [rubber duck method](https://rubberduckdebugging.com/)
 - After this steps if you still facing the issue, post your question on the Debuging Channel. (Explain your issue and post a piece of your code in the thread, so the channel don't get to much clutter.)
 
-If your question is non-technical -- you're feeling overwhelmed, or you have questions about a homework or project prompt -- please reach out directly to an **Sqaud Leader** as soon as possible.
+If your question is non-technical -- you're feeling overwhelmed, or you have questions about a homework or project prompt -- please reach out directly to an **Section Lead + IA** as soon as possible.
 
 Also:
 - Use your squad standup and Study Room to work with people on the same problem.
@@ -136,8 +134,6 @@ Each time a student signs up for Office Hours - during in-class office hours, or
 To maximize your time, make sure to prepared to discuss: 1.) "expected behavior" 2.) "observed behavior" 3.) debugging tried so far - console-logs server side, developer tools on the frontend, etc. 4.) solutions already tried.
 
 Squad standups, and logistical questions (e.g. about requirements, project proposal, times, etc) to you squad-lead to not take a token. Study Rooms do not take a token.
-
-
 
 
 
@@ -166,6 +162,10 @@ Did you follow code style guidance and best practices covered in class, such as 
 - **Problem Solving**  
 Are you able to defend why you implemented your solution in a certain way? Can you demonstrate that you thought through alternative implementations?
 </details>
+
+## Exercise - Proposal + Elaborate on GAphy
+
+Let's use Gaphy and think about how we'd build a sample proposal and also think about how we'd elaborate it into stretch goals. What kind of things would be cool to add? What would be the difficulty associated with them?
 
 <details><summary><strong>Useful Resources</strong></summary>
 
