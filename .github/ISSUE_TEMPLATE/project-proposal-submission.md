@@ -1,7 +1,7 @@
 ---
 name: Project proposal submission
 about: Issue to submit project proposal
-title: Your Name + Squad Lead
+title: Your Name | Section Color
 labels: ''
 assignees: ''
 
@@ -21,7 +21,5 @@ assignees: ''
 ### List of Mongoose models and their properties
 
 ### List of Routes
-
-### User stories
 
 ### Wireframes
