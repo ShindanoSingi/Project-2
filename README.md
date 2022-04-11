@@ -36,7 +36,7 @@ Do Not Do Non-CRUD Applications Such As:
 
 You will meet with an squad leader to get your app idea approved. Be sure to write out what features you will need to build in order to meet MVP and some stretch goal ideas.
 
-**Submit Project proposal [here](https://git.generalassemb.ly/staging-125/project-2/issues/new?assignees=&labels=&template=project-proposal-submission.md&title=Your+Name+%7C+Section+Color) by Tuesday April 13 6:00pm ET.**
+**Submit Project proposal [here](https://git.generalassemb.ly/flex-125/project-2/issues/new?assignees=&labels=&template=project-proposal-submission.md&title=Your+Name+%7C+Section+Color) by Tuesday April 13 6:00pm ET.**
 
 ### &#x1F534; Mandatory to pass:
 #### MVP - Minimum Viable Product
