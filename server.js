@@ -1,22 +1,9 @@
+require('dotenv').config()
 const express = require("express");
 const methodOverride = require('method-override');
 const usersController = require("./controllers/usersController");
 
 const app = express();
-
-require('dotenv').config();
-
-// The code below sets up the authentication
-const { auth } = require('express-openid-connect');
-
-const config = {
-    authRequired: false,
-    auth0Logout: true,
-    secret: 'a long, randomly-generated string stored in env',
-    baseURL: 'http://localhost:4000',
-    clientID: 'vLaV3fSngUrmEfkiHLuDdCsDTqfyXEJg',
-    issuerBaseURL: 'https://dev-wyf7mc9t.us.auth0.com'
-};
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));

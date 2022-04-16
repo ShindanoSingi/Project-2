@@ -92,3 +92,16 @@ router.get("/", (req, res) => {
     User.find({})
         .then((userData) => res.render("index", { userData }));
 });
+
+
+// The code below sets up the authentication
+const { auth } = require('express-openid-connect');
+
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: 'a long, randomly-generated string stored in env',
+    baseURL: 'http://localhost:4000',
+    clientID: 'vLaV3fSngUrmEfkiHLuDdCsDTqfyXEJg',
+    issuerBaseURL: 'https://dev-wyf7mc9t.us.auth0.com'
+};

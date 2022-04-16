@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Users = require("../models/users-models");
 const seedData = require("./users.json");
 
