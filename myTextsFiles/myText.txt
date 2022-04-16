@@ -1,0 +1,94 @@
+// The website for my Wireframe
+https://www.fluidui.com/editor/live/
+
+// Ideas came from this Youtube
+https://www.youtube.com/watch?v=W1Kttu53qTg
+
+// Like bootstrap
+https://www.youtube.com/watch?v=W1Kttu53qTg
+
+https://www.youtube.com/watch?v=ZGymN8aFsv4
+
+// To convert timestamp to actual timestamp
+https://www.delftstack.com/howto/javascript/javascript-convert-timestamp-to-date/
+
+// To set id check
+https://www.youtube.com/watch?v=QQwo4E_B0y8
+
+// I installed this package for key ckecking
+npm i express-openid-connect dotenv
+
+//I used this documentation to understand more about dotenv
+https://github.com/auth0/express-openid-connect
+
+// I got this code from the above websiteconst { auth } = require('express-openid-connect');
+app.use(
+  auth({
+    issuerBaseURL: 'https://YOUR_DOMAIN',
+    baseURL: 'https://YOUR_APPLICATION_ROOT_URL',
+    clientID: 'YOUR_CLIENT_ID',
+    secret: 'LONG_RANDOM_STRING',
+    idpLogout: true,
+  })
+);
+
+// This documentation is also helpfull in understanding how to authenticate users
+auth0.com/docs/quickstart/webapp/express
+
+// I installed the line below
+npm install express express-openid-connect --save
+
+// The code below came fron the link above after specifying the port number in the link above
+const { auth } = require('express-openid-connect');
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: 'a long, randomly-generated string stored in env',
+  baseURL: 'http://localhost:4000',
+  clientID: 'vLaV3fSngUrmEfkiHLuDdCsDTqfyXEJg',
+  issuerBaseURL: 'https://dev-wyf7mc9t.us.auth0.com'
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
+// After running "openssl rand -hex 32" in the terminal
+my secret hex = 677c605e97bb78bce5f50f0d807038db88e2a4aef471b1751aa4c504f97afd94
+
+// Get user profile informathion
+const { requiresAuth } = require('express-openid-connect');
+
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
+
+
+
+
+
+
+ 4/15/2022      |       Create a database to hold user Accounts
+ 4/16/2022      |       Insert seed Data into databases
+ 4/17/2022      |       Create front Frontend to harvest users data 
+ 4/18/2022      |       Create a superuser to have control over all users accounts
+ 4/19/2022      |       Do user authentification and Authorization
+ 4/20/2022      |       Insert user data into database
+ 4/21/2022      |       Create a Youtube like APP
+ 4/22/2022      |       Create a database (user Accounts)
+ 4/23/2022      |       Find an open API of songs
+ 4/24/2022      |       Transfer songs from API to database  of songs
+ 4/25/2022      |       Let the user search songs by artist name or song title      
+ 4/26/2022      |       Let the user play the song
+
+
+
+router.get("/", (req, res) => {
+    User.find({})
+        .then((userData) => res.render("index", { userData }));
+});
