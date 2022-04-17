@@ -21,6 +21,31 @@ npm i express-openid-connect dotenv
 //I used this documentation to understand more about dotenv
 https://github.com/auth0/express-openid-connect
 
+// Youtube video to explain about how to get spotify songs
+https://www.youtube.com/watch?v=0dmS0He_czs
+
+// To get access to spotify songs
+https://developer.spotify.com/dashboard/login
+
+Client ID ded8f323db1b4feda5882c90a1c32d06
+Client Secret 311f19911b304cd1b82ccd61b27731af 
+
+// setting up youtube developer accounts
+https://developers.google.com/youtube/v3/getting-started?authuser=1
+
+API Key:    AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
+API Key:    AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug
+
+My Youtube API
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=date&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
+https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&order=date&q=the%20weekend&safeSearch=moderate&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
+
+
+
+
+
+
+
 // I got this code from the above websiteconst { auth } = require('express-openid-connect');
 app.use(
   auth({
@@ -67,6 +92,15 @@ const { requiresAuth } = require('express-openid-connect');
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
+
+
+// // req.isAuthenticated is provided from the auth router
+// app.get('/', (req, res) => {
+//     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
+
+
+// Fetch does not work. Need to fix it.
 
 
 
