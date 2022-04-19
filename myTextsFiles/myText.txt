@@ -57,6 +57,15 @@ app.use(
   })
 );
 
+
+// Find a user in the database by id in the edit screen/window
+router.get('/edit', (req, res) => {
+    User.findById(req.params.id).then(userData => {
+        res.render('edit', userData)
+    })
+    res.render('edit');
+})
+
 // This documentation is also helpfull in understanding how to authenticate users
 auth0.com/docs/quickstart/webapp/express
 
@@ -139,3 +148,78 @@ const config = {
     clientID: 'vLaV3fSngUrmEfkiHLuDdCsDTqfyXEJg',
     issuerBaseURL: 'https://dev-wyf7mc9t.us.auth0.com'
 };
+
+// Update a user by id in the database, then go to the home screen
+router.put("/:id", (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body).then(
+        (userData) => res.redirect('/')
+    );
+});
+
+
+
+
+
+
+
+const express = require("express");
+const res = require("express/lib/response");
+const User = require("../models/users-models");
+
+// Define a router
+const router = express.Router();
+
+// Render all data form database to the browser "index"
+router.get("/", (req, res) => {
+    User.find({})
+        .then((userData) => res.render('index',{userData}));
+});
+
+// Add a user to the database, then go to the home screen
+router.post("/signUp", (req, res) => {
+    User.create(req.body)
+        .then(() => res.redirect('/'));
+});
+
+// Update a user by id in the database, then go to the home screen
+router.put("/:id", (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body).then(
+        (userData) => res.redirect('/')
+    );
+});
+
+// Find a user in the database by id in the edit screen/window
+router.get('/edit', (req, res) => {
+    User.findById(req.params.id).then(userData => {
+        res.render('edit', userData)
+    })
+    res.render('edit');
+})
+
+router.get('/signUp', (req, res) => {
+    Ingredient.findById(req.params.id).then(userData => {
+        res.render('edit', userData)
+    })
+    res.render('index');
+})
+
+// Delete a user from database, then go to the home screen
+router.delete("/:id", (req, res) => {
+    User.findOneAndRemove({ _id: req.params.id }).then((userData) =>
+        res.redirect('/')
+    );
+});
+
+router.get('/:id', (req, res) => {
+    res.render('signUp');
+})
+
+thead{
+    background-image: linear-gradient(rgb(188, 183, 183), rgb(5, 5, 0), rgb(119, 122, 119));
+    color: yellow;
+    
+}
+
+
+
+module.exports = router;

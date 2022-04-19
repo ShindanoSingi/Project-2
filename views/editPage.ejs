@@ -1,0 +1,21 @@
+<!-- <link href="editPage.css" rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="editPage.css" />
+
+<title>SongLib App</title>
+
+<h1 id="hOne">Edit the Field Carefully</h1>
+
+<form class="form" action="/<%=userData._id%>?_method=PUT" method="POST">
+  <div class="containerParent">
+    <input id="fName" class='input font row' type='text' name='firstName' placeholder="First Name" style="font-size: 2vw" size="30" value="<%=userData.firstName %>" />
+    <input id="mName" class='input font row' type='text' name='middleName' placeholder="Middle Name" style="font-size: 2vw" size="30" value="<%=userData.middleName %>" />
+    <input id="lName" class='input font row' type='text' name='lastName' placeholder="Last Name" style="font-size: 2vw" size="30" value="<%=userData.lastName %>" />
+    <input id="gender" class='input font row' type='text' name='email' placeholder="E-mail" style="font-size: 2vw" size="30" value="<%=userData.email %>" />
+    <input id="email" class='input font row' type='text' name='password' placeholder="Password" style="font-size: 2vw" size="30" value="<%=userData.password %>" />
+    <input id="email" class='input font row' type='text' name='gender' placeholder="Gender" style="font-size: 2vw" size="30" value="<%=userData.gender %>" />
+  </div>
+
+  <input class='editSubmitButton btn btn-primary button font submit' style="font-size: 2vw;" type="submit" />
+  <a class='button font cancel' style="font-size: 2vw;" href="/">Cancel</a>
+</form>
