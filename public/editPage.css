@@ -1,7 +1,7 @@
 .label {
    color: yellow;
    position: relative;
-   top: 5vh;
+   top: 4vh;
    left: -27vw;
 }
 
@@ -13,9 +13,10 @@
 }
 
 h1 {
+   color:lightgray;
    font-size: 5vw;
    position: relative;
-   right: 32%;
+   right: 30%;
 }
 
 /* labels and input boxes container */
@@ -33,9 +34,8 @@ h1 {
    display: flex;
    justify-content: space-around;
    position: relative;
-   right: 12.5vw;
-   top: 5vh;
-
+   top: 3vh;
+   left: -13vw;
 }
 
 body {

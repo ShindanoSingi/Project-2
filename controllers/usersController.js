@@ -23,7 +23,7 @@ router.get('/signUp', (req, res) => {
 // })
 
 // Add a user to the database, then go to the home screen
-router.post("/signUpPage", (req, res) => {
+router.post("/signUp", (req, res) => {
     User.create(req.body)
         .then(() => res.redirect('/'));
 });
@@ -65,6 +65,10 @@ router.delete("/:id", (req, res) => {
 
 router.get('/:id', (req, res) => {
     res.render('signUpPage');
+})
+
+router.get('/homePage', (req, res) => {
+    res.redirect('homePage');
 })
 
 

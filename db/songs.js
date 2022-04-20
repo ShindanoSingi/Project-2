@@ -1,5 +1,5 @@
 const axios = require('axios')
 
-axios.get('https://opentdb.com/api.php?amount=50&difficulty=hard&type=multiple')
+axios.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=date&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8')
   // .then(response => response.json())
-  .then(data => console.log(data.data.results));
+  .then(data => console.log(data.data.items));
