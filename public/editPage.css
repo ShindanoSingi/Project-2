@@ -1,3 +1,66 @@
+.label {
+   color: yellow;
+   position: relative;
+   top: 5vh;
+   left: -27vw;
+}
+
+.form {
+   width: fit-content;
+   position: relative;
+   top: 18vh;
+   left: 25vw;
+}
+
+h1 {
+   font-size: 5vw;
+   position: relative;
+   right: 32%;
+}
+
+/* labels and input boxes container */
+.containerParent{
+   position: relative;
+}
+
+/* input boxes width */
+.input{
+   width: 60vw; 
+}
+
+/* Both submit and cancel buttons */
+.submitAndCancelButtons{
+   display: flex;
+   justify-content: space-around;
+   position: relative;
+   right: 12.5vw;
+   top: 5vh;
+
+}
+
+body {
+   background-color: rgb(9, 82, 30);
+   font-size: 4vw;
+   position: relative;
+   left: 10vw;
+}
+
+.submitButton{
+   font-size: 4vw;
+}
+
+.cancelButton{
+   font-size: 4vw;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* thead {
@@ -55,7 +118,7 @@
    margin: 0 5vw 0 5vw;
 }
   */
-  
+
 
 
 /* #tableHead{
