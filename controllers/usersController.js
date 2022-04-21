@@ -8,24 +8,28 @@ const router = express.Router();
 // Render all data form database to the browser "index"
 router.get("/", (req, res) => {
     User.find({})
-        .then((userData) => res.render('adminPage',{userData}));
+        .then((userData) => res.render('adminPage', { userData }));
 });
 
 router.get('/signUp', (req, res) => {
-        res.render('signUpPage')
-    })
+    res.render('signUpPage')
+})
 
-// router.get('/signUp', (req, res) => {
-//     User.findById(req.params.id).then(userData => {
-//         res.render('edit', userData)
-//     })
-//     res.render('index');
-// })
+// When "Already signed in?" link is clicked, redirect to "sign in" page 
+router.get('/signIn', (req, res) => {
+    res.render('signInPage');
+})
+
+router.get('/homePage', (req, res) => {
+    res.render('homePage')
+})
+
+
 
 // Add a user to the database, then go to the home screen
 router.post("/signUp", (req, res) => {
     User.create(req.body)
-        .then(() => res.redirect('/'));
+        .then(() => res.redirect('/homePage'));
 });
 
 // Update a user by firstName in the database, then go to the home screen
@@ -52,7 +56,7 @@ router.put("/:password", (req, res) => {
 // Find a user in the database by id in the edit screen/window
 router.get('/:id/edit', (req, res) => {
     User.findById(req.params.id).then(userData => {
-        res.render('editPage', {userData})
+        res.render('editPage', { userData })
     })
 })
 
@@ -64,12 +68,14 @@ router.delete("/:id", (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    res.render('signUpPage');
+    res.render('homePage');
 })
 
 router.get('/homePage', (req, res) => {
     res.redirect('homePage');
 })
+
+
 
 
 

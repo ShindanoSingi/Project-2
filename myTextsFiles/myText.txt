@@ -31,6 +31,10 @@ Client ID ded8f323db1b4feda5882c90a1c32d06
 Client Secret 311f19911b304cd1b82ccd61b27731af 
 
 // setting up youtube developer accounts
+
+//Tutorial
+https://www.youtube.com/watch?v=idYUy3hf3D0
+
 https://developers.google.com/youtube/v3/getting-started?authuser=1
 
 API Key:    AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
@@ -41,6 +45,11 @@ https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=date&key=AIz
 https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&order=date&q=the%20weekend&safeSearch=moderate&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
 
 
+// The link to css is here
+https://cdnjs.com/libraries/font-awesome
+
+// Icone are here
+https://fontawesome.com/icons/globe?s=solid
 
 
 

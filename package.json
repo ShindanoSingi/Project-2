@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "@coreui/icons": "^3.0.0-alpha.0",
         "add-gitignore": "^1.1.1",
         "axios": "^0.26.1",
         "bootstrap": "^5.1.3",

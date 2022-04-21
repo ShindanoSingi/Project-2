@@ -1,37 +1,36 @@
 .submitAndCancelButtons {
-    font-size: 4vw;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    position: relative;
-    bottom: auto;
-    
+    margin-left: 2rem;
 }
 
 .input{
-    font-size: 5vw;
-    margin: 0 1vw;
-    margin: 1vh;
+    margin: 0 1rem;
+    /* margin: 1rem; */
 }
 
 .submit{
-    font-size: 4vw;
-    margin: 0 1vw;
-    margin: 2vh;
+    font-size: 3vw;
+   
 }
 
 .cancel{
-    font-size: 4vw;
-    margin: 0 1vw;
-    margin: 2vh;  
+    font-size: 3vw;
+    margin: 0 1rem; 
 }
 
 .inputParent{
-    margin-top: 25vh;
+    margin-top: 5rem;
 }
 
-
+.label{
+    color:rgb(6, 240, 240);
+    margin: 0% 0rem 0rem 0.5rem;
+}
 
 body {
+    font-size: 3vw;
     background-color: rgb(70, 84, 84);
-    margin: auto 10%;
+    margin: 0rem  2.5rem  0rem  0.5rem;
 }
