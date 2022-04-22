@@ -51,6 +51,14 @@ https://cdnjs.com/libraries/font-awesome
 // Icone are here
 https://fontawesome.com/icons/globe?s=solid
 
+// This is how to push the users info. into the database
+https://www.youtube.com/watch?v=-RCnNyD0L-s&t=143s
+
+// I installed passport
+npm i passport passport-local express-session express-flash
+
+
+
 
 
 

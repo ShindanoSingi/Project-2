@@ -1,0 +1,20 @@
+/* Search icon */
+#searchIcon {
+    font-size: 3vw;
+    position: relative;
+    top: -5vh;
+    left: 27vw;
+    margin: 1.5vh 0vw 0vh 22vw;
+}
+
+input {
+    font-size: 3vw;
+    width: 50vw;
+}
+
+body {
+    background-image: linear-gradient(rgb(170, 186, 47), rgb(150, 150, 19), rgb(170, 188, 76));
+    display: flex;
+    justify-content: center;
+    margin: 20vh 0vw 0vh 0vw;
+}

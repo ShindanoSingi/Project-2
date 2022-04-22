@@ -1,5 +1,4 @@
 const express = require("express");
-const res = require("express/lib/response");
 const User = require("../models/users-models");
 
 // Define a router
@@ -24,6 +23,11 @@ router.get('/homePage', (req, res) => {
     res.render('homePage')
 })
 
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
+router.post("/signIn", (req, res) => {
+    User.find({})
+        .then((userData) => res.render('songsLibPage', { userData }));
+});
 
 
 // Add a user to the database, then go to the home screen
