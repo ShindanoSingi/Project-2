@@ -12,94 +12,100 @@
 
 <body>
 
-  <h1>Users Accounts</h1>
-  <!-- Structuring the table -->
-  <!-- Source: https://www.youtube.com/watch?v=W1Kttu53qTg -->
+  <div class="image">
 
-  <table class="table table-striped table-hover">
-    <thead class="theadIndex">
-      <tr class="tableHead">
-        <th>ID</th>
-        <th>Name</th>
-        <th>E-mail</th>
-        <th>Password</th>
-        <th>Gender</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-    </thead>
+    <div class="body">
 
-    <tbody class="table-success">
-      <% userData.forEach(user => { %>
-
-      <!-- Put all accounts in row form -->
-      <tr>
-        <!-- Getting the number or postion of each Account -->
-        <td>
-          <div id="userNumber" class="font accounts">
-            <%= userData.indexOf(user) + 1 %>
-          </div>
-        </td>
-
-        <!-- Formatting the full name -->
-        <td>
-          <div id="fullName" class="font accounts">
-            <%= user.firstName %> <%= user.middleName %> <%= user.lastName %>
-          </div>
-        </td>
-
-        <!-- Formatting email -->
-        <td>
-          <div id="email" class="font accounts">
-            <%= user.email %>
-          </div>
-        </td>
-
-        <!-- Formatting password -->
-        <td>
-          <div id="password" class="font accounts">
-            <%= user.password %>
-          </div>
-        </td>
-
-        <!-- Formatting gender -->
-        <td>
-          <div id="gender" class="font accounts">
-            <%= user.gender %>
-          </div>
-        </td>
-
-        <!-- Formatting status -->
-        <td>
-          <select name="status" id="status" class="font accounts">
-            <option class="option" value="Active">Active</option>
-            <option class="option" value="Inactive">Inactive</option>
-          </select>
-
-        </td>
-
-        <!-- Formatting buttons (Edit and delete) under action -->
-        <td>
-          <div class="actionButtons">
-            <!-- Edit button -->
-            <a id="actionEdit" class="btn btn-success button submit font" href="/<%=user.id%>/edit">Edit</a>
-            <!-- Delete button -->
-            <form class='removeFormMargin' action="/<%=user.id%>?_method=DELETE" method="POST">
-              <input id="actionDelete" class="btn btn-danger button cancel font" type="submit" value="Delete" />
-            </form>
-          </div>
-        </td>
-
-        <% }) %>
-      </tr>
-    </tbody>
-  </table></table> 
+      <h1>Users Accounts</h1>
+      <!-- Structuring the table -->
+      <!-- Source: https://www.youtube.com/watch?v=W1Kttu53qTg -->
   
-  <a class="btn btn-primary cancelButton " href="/homePage">Cancel</a>
+      <table class="table table-striped table-hover">
+        <thead class="theadIndex">
+          <tr class="tableHead">
+            <th>ID</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
   
-  <tbody>
+        <tbody class="table-success">
+          <% userData.forEach(user => { %>
+  
+          <!-- Put all accounts in row form -->
+          <tr>
+            <!-- Getting the number or postion of each Account -->
+            <td>
+              <div id="userNumber" class="font accounts">
+                <%= userData.indexOf(user) + 1 %>
+              </div>
+            </td>
+  
+            <!-- Formatting the full name -->
+            <td>
+              <div id="fullName" class="font accounts">
+                <%= user.firstName %> <%= user.middleName %> <%= user.lastName %>
+              </div>
+            </td>
+  
+            <!-- Formatting email -->
+            <td>
+              <div id="email" class="font accounts">
+                <%= user.email %>
+              </div>
+            </td>
+  
+            <!-- Formatting password -->
+            <td>
+              <div id="password" class="font accounts">
+                <%= user.password %>
+              </div>
+            </td>
+  
+            <!-- Formatting gender -->
+            <td>
+              <div id="gender" class="font accounts">
+                <%= user.gender %>
+              </div>
+            </td>
+  
+            <!-- Formatting status -->
+            <td>
+              <select name="status" id="status" class="font accounts">
+                <option class="option" value="Active">Active</option>
+                <option class="option" value="Inactive">Inactive</option>
+              </select>
+  
+            </td>
+  
+            <!-- Formatting buttons (Edit and delete) under action -->
+            <td>
+              <div class="actionButtons">
+                <!-- Edit button -->
+                <a id="actionEdit" class="btn btn-success button submit font" href="/<%=user.id%>/edit">Edit</a>
+                <!-- Delete button -->
+                <form class='removeFormMargin' action="/<%=user.id%>?_method=DELETE" method="POST">
+                  <input id="actionDelete" class="btn btn-danger button cancel font" type="submit" value="Delete" />
+                </form>
+              </div>
+            </td>
+  
+            <% }) %>
+          </tr>
+        </tbody>
+      </table>
+      </table>
+      <tbody>
+            <a class="btn btn-primary doneButton " href="/homePage">Done</a>
 
-    
+    </div>
+
+    </div>
+
 </body>
 
 </html>

@@ -1,66 +1,68 @@
 .label {
-   font-size: 2vw;
-   color: yellow;
-   position: relative;
-   right: 1vw;
+   color: rgb(244, 19, 15);
+   font-size: 4vw;
+   
 }
 
 .form {
    width: fit-content;
-   position: relative;
-   top: 12vh;
-   left: 25vw;
 }
 
 h1 {
    color:lightgray;
    font-size: 4vw;
-   position: relative;
-   right: 25%;
+  position: relative;
+  top: 8vh;
 }
 
 /* labels and input boxes container */
 .containerParent{
-   position: relative;
+   display: grid;
+   justify-content: center;
 }
 
 /* input boxes width */
 .input{
-   width: 40vw; 
+   width: 50vw; 
 }
 
 /* Both submit and cancel buttons */
 .submitAndCancelButtons{
    display: flex;
    justify-content: space-around;
-   position: relative;
-   top: 3vh;
-}
-
-body {
-   background-color: rgb(9, 82, 30);
-  font-size: 1.5vw;
-  padding: 5vh 5vw 5vh 10vw;
+   position:relative;
+   top: 4vh;
 }
 
 .submitButton{
-  font-size: 1.5vw;
-  padding: 2%;
-  width: 120%;
-  position: relative;
-  left: -10vw;
+  padding: 3%;
+  width: 130%;
 }
 
 .cancelButton{
-   font-size: 1.5vw;
-   padding: 2%;
-   width: 120%;
-   position: relative;
-  right: 17vw;
+   padding: 3%;
+   width: 130%;
+}
+
+.image {
+
+   font-size: 3vw;
+   background-image: url("images/newHomeImage.png");
+   background-repeat: no-repeat;
+   background-position: center center;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+   height: 100vh;
 }
 
 
-
+body {
+   background-color: rgb(40, 2, 23);
+}
 
 
 

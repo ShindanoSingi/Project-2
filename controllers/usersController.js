@@ -1,5 +1,11 @@
 const express = require("express");
 const User = require("../models/users-models");
+const Song = require("../models/songs-models");
+let client_id = 'CLIENT_ID';
+
+const axios = require('axios')
+
+
 
 // Define a router
 const router = express.Router();
@@ -30,12 +36,11 @@ router.post("/signIn", (req, res) => {
 });
 
 
-// Add a user to the database, then go to the home screen
-router.post("/signUp", (req, res) => {
-    User.create(req.body)
-        .then(() => res.redirect('/homePage'));
-});
+// Getting spotify array
+// router.get('/signIn', (req, res) => {
 
+   
+      
 // Update a user by firstName in the database, then go to the home screen
 router.put("/:id", (req, res) => {
     User.findOneAndUpdate({ _id: req.params.id }, req.body).then(
@@ -78,6 +83,16 @@ router.get('/:id', (req, res) => {
 router.get('/homePage', (req, res) => {
     res.redirect('homePage');
 })
+
+
+
+
+// Add a user to the database, then go to the home screen
+router.post("/song", (req, res) => {
+
+    User.create(req.body)
+        .then(() => res.redirect('/homePage'));
+});
 
 
 

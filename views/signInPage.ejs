@@ -17,34 +17,34 @@
 
 <body>
 
-  <form class="form container" action="/signIn" method="POST">
+  <div class="image">
 
-    <h1>Please sign in.</h1>
+    <form class="form container" action="/signIn" method="POST">
 
-    <div class="containerParent">
-      <label class='label' for="name">E-mail:</label>
-      <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
-      <label class='label' for="name">Password:</label>
-       <!-- This line below sets the eye icon -->
-      <div><input id="password" class='input font row' type='password' name='password' placeholder="Password">
-        <span class="eye"><i class="fa-solid fa-eye-slash"></i></span></div>
-    </div>
+      <h1>Please sign in.</h1>
 
-    </div>
-
-    <div class="submitAndCancelButtons">
-      <div>
-        <input class='submitButton btn btn-primary' type="submit" value="SignIn"/>
-      </div>
-      <div>
-        <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+      <div class="containerParent">
+        <label class='label' for="name">E-mail:</label>
+        <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
+        <label class='label' for="name">Password:</label>
+        <!-- This line below sets the eye icon -->
+        <input id="password" class='input font row' type='password' name='password' placeholder="Password">
+        <i class="eye fa-solid fa-eye-slash"></i>
       </div>
 
-    </div>
 
 
-  </form>
+      <div class="submitAndCancelButtons">
+        <div>
+          <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
+        </div>
+        <div>
+          <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+        </div>
+      </div>
+    </form>
 
+  </div>
 </body>
 
 </html>

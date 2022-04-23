@@ -57,6 +57,34 @@ https://www.youtube.com/watch?v=-RCnNyD0L-s&t=143s
 // I installed passport
 npm i passport passport-local express-session express-flash
 
+// Tutorial on how to use ejs 
+https://www.youtube.com/watch?v=lYVKbAn5Od0
+
+// Tutorial on how to use js in ejs
+https://www.youtube.com/watch?v=EkQc-8uzxIA
+
+// I used this website to convert my image into a url
+https://imgur.com/upload
+my image url is: https://imgur.com/a/Mo0lnRz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -244,3 +272,46 @@ thead{
 
 
 module.exports = router;
+
+
+
+
+
+
+let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&order=date&safeSearch=moderate&videoType=any&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug`
+
+axios.get(url)
+    .then(data => {
+        arraySongs.push(data.data.items)
+
+        //Loop through the entire array of objects, and just grab song title, videoID and thumbnail
+        arraySongs.forEach(song => {
+            song.forEach(eachSong => {
+                let mySong = {
+                    "songTitle": eachSong.snippet.title,
+                    "videoID": eachSong.id.videoId,
+                    "thumbnail": eachSong.snippet.thumbnails.high,
+                    "url": `https://www.youtube.com/watch?v=${eachSong.id.videoId}`
+                };
+                seedSongs.push(mySong)
+            }
+
+            )
+            console.log(seedSongs)
+
+
+
+           // Insert data into database
+            let myJsonseedData = JSON.stringify(seedSongs);
+            Song.deleteMany({})
+                .then(() => {
+                    return Song.insertMany(seedSongs);
+                })
+                .then((res) => console.log(res))
+                .catch((err) => console.log(err))
+                .finally(() => {
+                    process.exit();
+                });
+        })
+    })
+

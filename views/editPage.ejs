@@ -16,56 +16,59 @@
 
 <body>
 
-  <form class="form" action="/<%=userData._id%>?_method=PUT" method="POST">
+  <div class="image">
 
-    <h1>Please Edit the Information Carefully!</h1><br><br><br>
+    <form class="form" action="/<%=userData._id%>?_method=PUT" method="POST">
 
-    <div class="containerParent">
-      <div>
-        <label class='label' for="name">First Name:</label>
-        <input id="fName" class='input font row' type='text' name='firstName' placeholder="First Name" value="<%=userData.firstName %>" />
+      <h1>Please Edit the Information Carefully!</h1><br><br><br>
+
+      <div class="containerParent">
+        <div>
+          <label class='label' for="name">First Name:</label>
+          <input id="fName" class='input font row' type='text' name='firstName' placeholder="First Name" value="<%=userData.firstName %>" />
+        </div>
+
+        <div>
+          <label class='label' for="name">Middle Name:</label>
+          <input id="mName" class='input font row' type='text' name='middleName' placeholder="Middle Name" value="<%=userData.middleName %>" />
+        </div>
+
+        <div>
+          <label class='label' for="name">Last Name:</label>
+          <input id="lName" class='input font row' type='text' name='lastName' placeholder="Last Name" value="<%=userData.lastName %>" />
+        </div>
+
+        <div>
+          <label class='label' for="name">E-mail:</label>
+          <input id="gender" class='input font row' type='text' name='email' placeholder="E-mail" value="<%=userData.email %>" />
+        </div>
+
+        <div>
+          <label class='label' for="name">Password:</label>
+          <input id="email" class='input font row' type='text' name='password' placeholder="Password" value="<%=userData.password %>" />
+        </div>
+
+        <div>
+          <label class='label' for="name">Gender</label>
+          <input id="email" class='input font row' type='text' name='gender' placeholder="Gender" value="<%=userData.gender %>" />
+        </div>
+
       </div>
 
-      <div>
-        <label class='label' for="name">Middle Name:</label>
-        <input id="mName" class='input font row' type='text' name='middleName' placeholder="Middle Name" value="<%=userData.middleName %>" />
+      <div class="submitAndCancelButtons">
+        <div>
+          <input class='submitButton btn btn-primary' type="submit" />
+        </div>
+        <div>
+          <a class='cancelButton btn btn-warning' href="/">Cancel</a>
+        </div>
+
       </div>
 
-      <div>
-        <label class='label' for="name">Last Name:</label>
-        <input id="lName" class='input font row' type='text' name='lastName' placeholder="Last Name" value="<%=userData.lastName %>" />
-      </div>
 
-      <div>
-        <label class='label' for="name">E-mail:</label>
-        <input id="gender" class='input font row' type='text' name='email' placeholder="E-mail" value="<%=userData.email %>" />
-      </div>
+    </form>
 
-      <div>
-        <label class='label' for="name">Password:</label>
-        <input id="email" class='input font row' type='text' name='password' placeholder="Password" value="<%=userData.password %>" />
-      </div>
-
-      <div>
-        <label class='label' for="name">Gender</label>
-        <input id="email" class='input font row' type='text' name='gender' placeholder="Gender" value="<%=userData.gender %>" />
-      </div>
-
-    </div>
-
-    <div class="submitAndCancelButtons">
-      <div>
-        <input class='submitButton btn btn-primary' type="submit" />
-      </div>
-      <div>
-        <a class='cancelButton btn btn-warning' href="/">Cancel</a>
-      </div>
-
-    </div>
-
-
-  </form>
-
+  </div>
 </body>
 
 </html>

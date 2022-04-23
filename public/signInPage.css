@@ -1,69 +1,74 @@
-h1{
+h1 {
     font-size: 5vw;
     text-align: center;
-    color: rgb(234, 200, 5);
-    position: relative;
-    margin-bottom: 4rem;
+    color: rgb(233, 200, 5);
 }
 
-.submitAndCancelButtons {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    margin-left: 2rem;
-}
 
-.input{
+.input {
     margin: 0 1rem;
-    /* margin: 1rem; */
 }
 
-.submit{
-    font-size: 3vw;
-   
-}
-
-.cancel{
-    font-size: 3vw;
-    margin: 0 1rem; 
-}
-
-.label{
-    color:rgb(246, 153, 3);
+.label {
+    color: rgb(236, 153, 3);
     margin: 0% 0rem 0rem 1rem;
 }
 
-.eye{
-    color: rgb(183, 148, 67);
+.eye {
+    color: rgb(183, 138, 67);
     display: flex;
     justify-content: right;
-    margin: -5vh -7vw 0vh 0vw;
+    position: relative;
+    left: 3vw;
+    top: -4vh;
 }
 
-.submitButton{
-    font-size: 4vw;
+.submitButton {
+    font-size: 3vw;
 }
 
-.cancelButton{
-    font-size: 4vw;
+.cancelButton {
+    font-size: 3vw;
 }
 
-.submitAndCancelButtons{
+.submitAndCancelButtons {
     display: grid;
     justify-content: center;
     row-gap: 2rem;
-    margin-top: 4rem;
+
+    position: relative;
+    margin-top: 15vh;
 }
 
-#email, #password{
+#email, #password {
     width: 70vw;
 }
 
-body {
-    font-size: 4vw;
-    background-color: rgb(98, 92, 88);
-    display: grid;
-    justify-content: center;
+.image {
+
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.container{
     position: relative;
-   top: 6rem;
+    margin-top: 7vh;
+}
+
+.containerParent{
+    position: relative;
+    margin-top: 25vh; 
+}
+
+body {
+    font-size: 3vw;
+    background-color: rgb(98, 92, 88);
 }

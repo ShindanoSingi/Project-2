@@ -1,34 +1,56 @@
-
-.h1{
-font-size: 5vw;
-margin: 10rem 3rem 0rem 3rem;
-display: flex;
-justify-content: center;
+.h1 {
+    font-size: 5vw;
+    margin: 10rem 3rem 0rem 3rem;
+    display: flex;
+    justify-content: center;
 }
 
-.h2{
+.h2 {
     font-size: 4vw;
     text-align: center;
-    }
+}
 
-.signUp{
+.signUp {
     font-size: 3vw;
     display: flex;
     justify-content: center;
     position: relative;
-    top: 15rem;
     margin: 0rem 40vw;
 }
 
-.signIn{
+.signIn {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 17rem;
+}
+
+.header {
+    color: rgba(52, 52, 237, 0.983);
+    position: relative;
+    top: -15vh;
+}
+
+.signUpAndIn {
+    position: relative;
+    top: -10vh;
+}
+
+
+.image {
+
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
 }
 
 body {
     font-size: 3vw;
-    background-color: rgb(161, 128, 98);
-    margin: 0rem 0rem 0rem 0rem;
+    background-color: rgb(166, 112, 41);
 }

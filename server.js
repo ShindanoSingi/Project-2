@@ -7,7 +7,8 @@ const usersController = require("./controllers/usersController");
 const app = express();
 
 app.use(methodOverride('_method'))
-app.use(express.json());app.use(express.static(__dirname + '/' + 'public'));
+app.use(express.json());
+app.use(express.static(__dirname + '/' + 'public'));
 app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'ejs');
 

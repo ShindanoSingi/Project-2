@@ -2,9 +2,10 @@
 #searchIcon {
     font-size: 3vw;
     position: relative;
-    top: -5vh;
-    left: 27vw;
-    margin: 1.5vh 0vw 0vh 22vw;
+    top: -90.5vh;
+    left: 17vw;
+    margin: 0vh 0vw 0vh 22vw;
+    color: rgb(6, 66, 232);
 }
 
 input {
@@ -12,9 +13,25 @@ input {
     width: 50vw;
 }
 
-body {
-    background-image: linear-gradient(rgb(170, 186, 47), rgb(150, 150, 19), rgb(170, 188, 76));
+.search{
+    padding-top: 5vh;
+    
+}
+
+.image {
+
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
     display: flex;
-    justify-content: center;
-    margin: 20vh 0vw 0vh 0vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(20, 155, 128); 
 }
