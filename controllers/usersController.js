@@ -1,9 +1,16 @@
+require('dotenv').config()
 const express = require("express");
-const User = require("../models/users-models");
-const Song = require("../models/songs-models");
-let client_id = 'CLIENT_ID';
-
 const axios = require('axios')
+const User = require("../models/users-models");
+
+// // I am using this youtube API. This API return results based on specified country
+// urlCountry = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// // I am using this youtube API. This API return results for all countries
+// urlWorld = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// This API searches by title
+url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=Rayvanny&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
 
 
 
@@ -35,12 +42,6 @@ router.post("/signIn", (req, res) => {
         .then((userData) => res.render('songsLibPage', { userData }));
 });
 
-
-// Getting spotify array
-// router.get('/signIn', (req, res) => {
-
-   
-      
 // Update a user by firstName in the database, then go to the home screen
 router.put("/:id", (req, res) => {
     User.findOneAndUpdate({ _id: req.params.id }, req.body).then(
@@ -84,17 +85,34 @@ router.get('/homePage', (req, res) => {
     res.redirect('homePage');
 })
 
-
-
-
 // Add a user to the database, then go to the home screen
-router.post("/song", (req, res) => {
-
+router.post("/signUp", (req, res) => {
     User.create(req.body)
         .then(() => res.redirect('/homePage'));
 });
 
+// The code below is for songs API and User interaction with the API
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
 
+// The "/songsLib" is what I specified in the action in the forn in the ejs file
+// The "res.render('songsLibPage');" is where the information will be sent to.
+// This code is responsible of capturin searched information in the input box from songsLibPage
+router.post("/songsLib", (req, res) => {
+    let userTitle = req.body
+    // console.log(userTitle.title)
+    res.render('songsLibPage', { searchedTitle: userTitle.title });
+});
+
+router.get('/songsLib', (req, res) => {
+    axios.get(url)
+        .then((res) => {
+            return res.json()
+        })
+        .then((data) => res.render('songsLibPage', { searchedTitle: userTitle.title }));
+
+    // res.render('songsLibPage', data )
+
+})
 
 
 

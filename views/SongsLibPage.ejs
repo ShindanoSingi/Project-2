@@ -16,10 +16,22 @@
 </head>
 
 <body>
-<div class="image search">
-    <input id="song" class='input font row' type='text' name='song' placeholder="Type the song or artist name">
-    <i id="searchIcon" class="fa-solid fa-magnifying-glass" type="submit"></i>
-</div>
+  
+  <form class="form container" action="/songsLib" method="POST">
+
+    <div class="image search">
+       
+      <input id="song" class='input font row' type='text' name='title' placeholder="Type the song or artist name">
+      <i id="searchIcon" class="fa-solid fa-magnifying-glass" type="submit"></i>
+      <!-- <select name="status" id="status" class="font accounts">
+        <option class="option" value="Active">Active</option>
+        <option class="option" value="Inactive">Inactive</option>
+      </select> -->
+    </div>
+  </form>
+
+  <h1><%=searchedTitle%> </h1> 
+
 </body>
 
 </html>

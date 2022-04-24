@@ -1,7 +1,8 @@
 const mongoose = require('../db/connection')
 
 // Structure data in database
-const UserSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema(
+    {
     firstName: {
         type: String,
         required: true
@@ -30,7 +31,7 @@ const UserSchema = new mongoose.Schema({
 },
     {
 
-        timestamps: Date
+        timestamps: String
     }
 
 );

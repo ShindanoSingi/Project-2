@@ -18,7 +18,7 @@
         "gitignore": "^0.7.0",
         "method-override": "^3.0.0",
         "mongoose": "^6.3.0",
-        "node-fetch": "^3.2.3",
+        "node-fetch": "^2.6.1",
         "node-youtube-music": "^0.7.0",
         "nodemon": "^2.0.15",
         "passport": "^0.5.2",

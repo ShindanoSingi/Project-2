@@ -23,6 +23,9 @@ input {
     background-image: url("images/newHomeImage.png");
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 20%;
+    background-position-y: 7vh;
+   
 
     display: flex;
     flex-direction: column;

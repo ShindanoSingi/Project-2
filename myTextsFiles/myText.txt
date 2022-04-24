@@ -67,6 +67,20 @@ https://www.youtube.com/watch?v=EkQc-8uzxIA
 https://imgur.com/upload
 my image url is: https://imgur.com/a/Mo0lnRz
 
+// List of country codes to use in order to get videos specific to that country
+https://www.iso.org/obp/ui/#search
+
+// I am using this youtube API now
+// Source: https://developers.google.com/youtube/v3/docs/search/list?apix=true&apix_params=%7B%22part%22%3A%5B%22snippet%22%5D%2C%22maxResults%22%3A1000000000%2C%22regionCode%22%3A%22TZ%22%7D
+
+let url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// I have used this youtube to understand how to work with axios, API, ejs and controller
+https://www.youtube.com/watch?v=6LaGLqUHKms 
+
+// I hid my API key by doing this // This API searches by title
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=${searchedWord}&key=${process.env.API_KEY}`;
+
 
 
 
@@ -314,4 +328,49 @@ axios.get(url)
                 });
         })
     })
+
+
+
+
+
+
+
+
+
+
+require('dotenv').config()
+
+const axios = require('axios')
+const Song = require("../models/songs-models");
+
+// Define an array of objects to hold all songs from the youtube API
+let arraySongs = [];
+
+// Define a new array to hold just some information of interest (songTitle, videoID, thumbnail and video's url)
+let seedSongs = []
+
+let url = '';
+
+
+// I am using this youtube API. This API return results based on specified country
+//url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// I am using this youtube API. This API return results for all countries
+//url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+//
+url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=Rayvanny&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
+
+// I used this youtube API
+//https://developers.google.com/youtube/v3/docs/search/list?apix_params=%7B%22part%22%3A%5B%22snippet%22%5D%2C%22maxResults%22%3A1000000000%2C%22order%22%3A%22date%22%2C%22safeSearch%22%3A%22moderate%22%2C%22videoType%22%3A%22any%22%7D&apix=true
+
+axios.get(url)
+    .then(data => 
+        
+        console.log(data.data.items))
+
+// Fields of interest
+//let title = 
+    
+
 
