@@ -50,6 +50,13 @@ input {
     overflow-wrap: break-word;
 }
 
+  .jinaLangu{
+      font-size: xx-large;
+      position: relative;
+      left: -31vw;
+      color: rgb(11, 152, 124); 
+  }
+
 body {
     background-color: rgb(20, 155, 128); 
 }

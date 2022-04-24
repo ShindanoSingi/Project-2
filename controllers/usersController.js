@@ -9,9 +9,6 @@ let songs = [];
 // // I am using this youtube API. This API return results based on specified country
 // urlCountry = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
 
-// // I am using this youtube API. This API return results for all countries
-// urlWorld = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
-
 // This API searches by title
 url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=Rayvanny&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
 
@@ -109,7 +106,7 @@ router.post("/songsLib", (req, res) => {
 
     axios.get(url)
     .then((data) => {
-        console.log(data.data.items[0].snippet.thumbnails.default.url)
+        // console.log(data.data.items[0].snippet.thumbnails.default.url)
         res.render('songsLibPage', {searchedTitle: data.data.items});
     })
     

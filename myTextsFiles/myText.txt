@@ -121,7 +121,7 @@ https://console.cloud.google.com/apis/api/youtube.googleapis.com/metrics?project
 
 STRETCH GOALS:
 
-remove adds, display more data, figure out how to find a parmanent key
+remove adds, display more data (number of views...), figure out how to find a parmanent key, add intellicense to the search box, make the search icon work
 
 
 // Working API url
