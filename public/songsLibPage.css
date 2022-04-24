@@ -2,10 +2,10 @@
 #searchIcon {
     font-size: 3vw;
     position: relative;
-    top: -90.5vh;
+    top: -85.5vh;
     left: 17vw;
     margin: 0vh 0vw 0vh 22vw;
-    color: rgb(6, 66, 232);
+    color: rgb(37, 73, 170);
 }
 
 input {
@@ -37,8 +37,11 @@ input {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
     grid-gap: 3vw;
+}
+
+.allVideos{
     position: relative;
-    top: -70vh;
+    top: -60vh;
 }
 
 /* The video link */

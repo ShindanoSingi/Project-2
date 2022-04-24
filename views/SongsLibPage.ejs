@@ -30,26 +30,28 @@
 
   </form>
 
-</body>
+  <div class="allVideos">
+    <div class="container">
 
-<div class="container">
-
-  <% searchedTitle.forEach(song => {%>
-
-  <div class="songs">
-
-    <!-- This code links the thumbnail to the youtube link -->
-    <!-- I skipped ads by adding the "_popup" between "watch" and "?" -->
-    <a class="button submit font" href="https://www.youtube.com/watch_popup?v=<%=song.id.videoId%>" target="_blank"><img src="<%=song.snippet.thumbnails.medium.url %>" target="_blank" alt="<%=song.snippet.title%>"></a>
-
-    <!-- This is the youtube link to the video -->
-    <div class="title">
-      <a href="https://www.youtube.com/watch_popup?v=<%=song.id.videoId%>>" target="_blank"><%=song.snippet.title%></a>
+      <% searchedTitle.forEach(song => {%>
+    
+      <div class="songs">
+    
+        <!-- This code links the thumbnail to the youtube link -->
+        <!-- I skipped ads by adding the "_popup" between "watch" and "?" -->
+        <a class="button submit font" href="https://www.youtube.com/watch_popup?v=<%=song.id.videoId%>" target="_blank"><img src="<%=song.snippet.thumbnails.medium.url %>" target="_blank" alt="<%=song.snippet.title%>"></a>
+    
+        <!-- This is the youtube link to the video -->
+        <div class="title">
+          <a href="https://www.youtube.com/watch_popup?v=<%=song.id.videoId%>>" target="_blank"><%=song.snippet.title%></a>
+        </div>
+    
+      </div>
+    
+      <% }); %>
     </div>
-
   </div>
 
-  <% }); %>
-</div>
+</body>
 
 </html>
