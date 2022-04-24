@@ -19,20 +19,32 @@ input {
 }
 
 .image {
-
     background-image: url("images/newHomeImage.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20%;
     background-position-y: 7vh;
-   
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     height: 100vh;
+}
+
+/* This contains all videos */
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    grid-gap: 3vw;
+    position: relative;
+    top: -70vh;
+}
+
+/* The video link */
+.title{
+    font-size: medium;
+    overflow-wrap: break-word;
 }
 
 body {

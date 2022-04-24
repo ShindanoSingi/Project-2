@@ -3,6 +3,9 @@ const express = require("express");
 const axios = require('axios')
 const User = require("../models/users-models");
 
+let userTitle = '';
+let songs = [];
+
 // // I am using this youtube API. This API return results based on specified country
 // urlCountry = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&regionCode=TZ&key=AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug"
 
@@ -98,20 +101,23 @@ router.post("/signUp", (req, res) => {
 // The "res.render('songsLibPage');" is where the information will be sent to.
 // This code is responsible of capturin searched information in the input box from songsLibPage
 router.post("/songsLib", (req, res) => {
-    let userTitle = req.body
+    userTitle = req.body
     // console.log(userTitle.title)
-    res.render('songsLibPage', { searchedTitle: userTitle.title });
+    //res.render('songsLibPage', { searchedTitle: userTitle.title });
+
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${userTitle.title}&key=${process.env.API_KEY}`
+
+    axios.get(url)
+    .then((data) => {
+        console.log(data.data.items[0].snippet.thumbnails.default.url)
+        res.render('songsLibPage', {searchedTitle: data.data.items});
+    })
+    
+    
 });
 
 router.get('/songsLib', (req, res) => {
-    axios.get(url)
-        .then((res) => {
-            return res.json()
-        })
-        .then((data) => res.render('songsLibPage', { searchedTitle: userTitle.title }));
-
-    // res.render('songsLibPage', data )
-
+        res.render('songsLibPage', { songs: userTitle.title });
 })
 
 

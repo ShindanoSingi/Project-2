@@ -39,6 +39,8 @@ https://developers.google.com/youtube/v3/getting-started?authuser=1
 
 API Key:    AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
 API Key:    AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug
+API Key:    AIzaSyDwWLgzl7aMOyqJ-IZr4FyPi_Y5x2eKNgw
+API Key:    AIzaSyDncfIpqQpKKuqaIRRMXLNyJt9bKmd0XHY
 
 My Youtube API
 https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=date&key=AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
@@ -81,8 +83,49 @@ https://www.youtube.com/watch?v=6LaGLqUHKms
 // I hid my API key by doing this // This API searches by title
     let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=${searchedWord}&key=${process.env.API_KEY}`;
 
+    // On my to getting my data to show on songs package
+     <div class="song"><%=searchedTitle[0].snippet.title%></div>
+
+     <div class="song"><%=searchedTitle[8].snippet.title%></div>
+
+// Working code for just one song
+<body>
+  <img src="<%=searchedTitle[8].snippet.thumbnails.high.url %> " alt="gggg"><br>
+  <a href="https://www.youtube.com/watch?v=<%=searchedTitle[8].id.videoId%>>" target="_"><%=searchedTitle[8].snippet.title%></a>
+</body>
+
+<body>
+
+  <div class="container">
+
+    <% searchedTitle.forEach(song => {%>
+
+    <a class="button submit font" href="https://www.youtube.com/watch?v=<%=song.id.videoId%>"><img src="<%=song.snippet.thumbnails.medium.url %> " alt="gggg" target="_"></a>
+
+    <div class="title">
+      <a href="https://www.youtube.com/watch?v=<%=song.id.videoId%>>" target="_"><%=song.snippet.title%></a><br>
+    </div>
+    <br>
+    <% }); %>
+  </div>
+
+</body>
 
 
+// To request an API_KEY
+https://console.cloud.google.com/projectcreate?previousPage=%2Fapis%2Fdashboard%3Fauthuser%3D1%26project%3Dyoutube-create-app-test&organizationId=0&authuser=1
+
+https://console.cloud.google.com/apis/api/youtube.googleapis.com/metrics?project=my-project-2-347501&organizationId=0
+
+
+
+STRETCH GOALS:
+
+remove adds, display more data, figure out how to find a parmanent key
+
+
+// Working API url
+let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${userTitle.title}&key=${process.env.API_KEY}
 
 
 
@@ -372,5 +415,12 @@ axios.get(url)
 // Fields of interest
 //let title = 
     
+// This example is from Youtube.
+function searchByKeyword() {
+  var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
 
-
+  for(var i in results.items) {
+    var item = results.items[i];
+    Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
+  }
+}
