@@ -1,73 +1,72 @@
-.label {
-   color: rgb(244, 19, 15);
-   font-size: 4vw;
-   
-}
-
-.form {
-   width: fit-content;
-}
-
+/* Style h1 */
 h1 {
-   color:lightgray;
-   font-size: 4vw;
-  position: relative;
-  top: 8vh;
+   text-align: center;
+   color: rgb(213, 240, 10);
+   font-size: 3vw;
 }
 
-/* labels and input boxes container */
-.containerParent{
-   display: grid;
-   justify-content: center;
+/* Style labels */
+.label {
+   color: rgb(198, 244, 15);
+   font-size: 2.7vw;
+   position: relative;
+   left: -0.5vw;
 }
 
 /* input boxes width */
-.input{
-   width: 50vw; 
+.input {
+   font-size: 2.5vw;
+   width: 40vw;
 }
 
 /* Both submit and cancel buttons */
-.submitAndCancelButtons{
+.submitAndCancelButtons {
    display: flex;
    justify-content: space-around;
-   position:relative;
+   position: relative;
    top: 4vh;
 }
 
-.submitButton{
-  padding: 3%;
-  width: 130%;
-}
-
-.cancelButton{
+/* Style submit button */
+.submitButton {
+   font-size: 2.5vw;
    padding: 3%;
    width: 130%;
 }
 
-.image {
+/* Style cancel button */
+.cancelButton {
+   font-size: 2.5vw;
+   padding: 3%;
+   width: 130%;
+}
 
-   font-size: 3vw;
+/* Style the form */
+.form{
+   position: relative;
+   top: 10vh;
+}
+
+/* Style background image */
+.image {
    background-image: url("images/newHomeImage.png");
    background-repeat: no-repeat;
    background-position: center center;
-
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
-
    height: 100vh;
 }
 
+/* Style the container Parent */
+.containerParent{
+   font-size: 2vw;
+   display: grid;
+   justify-content: center;
+}
 
+/* Style body */
 body {
    background-color: rgb(40, 2, 23);
 }
-
-
-
-
-
-
-
-

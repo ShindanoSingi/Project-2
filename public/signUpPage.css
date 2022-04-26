@@ -1,58 +1,446 @@
-h1{
+/* Source: https://stackoverflow.com/questions/42415141/what-is-the-media-query-for-large-desktops */
+
+/* Mobile devices */
+
+@media screen and (max-width: 480px) {
+
+    /* h1 */
+    h1 {
+        font-size: 8vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-7vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 4vw;
+        margin: 04vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1.5vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 80vw;
+        font-size: 50vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-80vh);
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(12vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+
+    /* h1 */
+    h1 {
+        font-size: 5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-5vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 3vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 3vw;
+        margin: 0 3vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 3.5vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 60vw;
+        font-size: 3vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-20vh);
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(10vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+}
+
+
+
+
+/* For large Laptops */
+
+@media screen and (max-width: 992px) {
+
+    /* h1 */
+    h1 {
+        font-size: 5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-5vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 3vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 3vw;
+        margin: 0 3vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 3vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 50vw;
+        font-size: 2.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-15vh);
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+}
+
+
+
+
+/* For Big TV's (HD Screens */
+
+@media screen and (max-width: 1280px) {
+     /* h1 */
+     h1 {
+        font-size: 5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-5vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 1.9vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 1.9vw;
+        margin: 0 3vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 1.5vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.5vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 50vw;
+        font-size: 1.9vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-17vh);
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+}
+
+
+
+
+/* For Projector */
+
+@media screen and (max-width: 1920px) {
+   /* h1 */
+   h1 {
+    font-size: 2.5vw;
     text-align: center;
     color: white;
-    position: relative;
-    top: -5vh;
+    transform: translateY(-2vh);
 }
 
-.submitAndCancelButtons {
-    margin-top: 2rem;
-    display: flex;
+/* input boxes */
+.input {
+    border-radius: 15px;
+}
+
+/* Submit button */
+.submit {
+    border-radius: 15px;
+    font-size: 1.5vw;
+}
+
+/* Cancel button */
+.cancel {
+    border-radius: 15px;
+    font-size: 1.5vw;
+    margin: 0 3vw;
+}
+
+/* Labels */
+.label {
+    font-size: 1.7vw;
+    color: rgb(6, 240, 240);
+    transform: translateX(-0.5vw);
+}
+
+/* center all elements in the body */
+.inputParent {
+    width: 40vw;
+    font-size: 1.5vw;
+    display: grid;
     justify-content: center;
-    margin-left: 2rem;
+    transform: translateY(-15vh);
 }
 
-.input{
-    margin: 0 1rem;
-    /* margin: 1rem; */
-}
-
-.submit{
-    font-size: 3vw;
-   
-}
-
-.cancel{
-    font-size: 3vw;
-    margin: 0 1rem; 
-}
-
-.label{
-    color:rgb(6, 240, 240);
-    margin: 0% 0rem 0rem 0.5rem;
-}
-
-.inputParent{
-    position: relative;
-    top: -15vh
-}
-
+/* Backgrounf image */
 .image {
-
     background-image: url("images/newHomeImage.png");
     background-repeat: no-repeat;
     background-position: center center;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     height: 100vh;
 }
 
+/* Submit and cancel buttons */
+.submitAndCancelButtons {
+    transform: translateY(8vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Both forgot eamail and password */
 body {
-    font-size: 3vw;
-    background-image: radial-gradient(circle at center, rgb(4, 34, 10) 0, rgb(2, 22, 4), green 100%)
-   
+    background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+}  
+}
+
+
+
+/* For 4K display */
+
+@media screen and (max-width: 3840px) {
+      /* h1 */
+      h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-2vh);
+    }
+    
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+    
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 1.5vw;
+    }
+    
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 1.5vw;
+        margin: 0 3vw;
+    }
+    
+    /* Labels */
+    .label {
+        font-size: 1.7vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.2vw);
+    }
+    
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 1.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-15vh);
+    }
+    
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    } 
 }

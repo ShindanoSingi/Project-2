@@ -1,7 +1,7 @@
 h1 {
     color: aliceblue;
     text-align: center;
-    font-size: 5vw;
+    font-size: 3vw;
     display: flex;
     justify-content: center;
     position: relative;
@@ -9,9 +9,10 @@ h1 {
 }
 
 thead {
-    font-size: 3vw;
+    font-size: 1.5vw;
     background-image: linear-gradient(rgb(188, 183, 183), rgb(5, 5, 0), rgb(119, 122, 119));
     color: yellow;
+    text-align: center;
 }
 
 .actionButtons {
@@ -21,43 +22,59 @@ thead {
 }
 
 #actionEdit {
-    font-size: 2vw;
-    padding: 8px 5px;
+    font-size: 1.5vw;
+    padding: 0px 5px;
+    margin-right: 3vw;
+    padding-bottom: -6vh;
+    width: 6vw;
 }
 
 #actionEdit:hover {
     background-image: linear-gradient(rgb(15, 1, 1), rgb(9, 149, 30), rgb(15, 16, 15));
 }
 
+.crayon {
+    transform: translate(0vw, 1vh);
+}
+
 #actionDelete {
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 8px 5px;
+    margin-right: -4vw;
+    margin-left: 1.5vw;
+    width: 6vw;
 }
 
 #actionDelete:hover {
     background-image: linear-gradient(rgb(15, 1, 1), rgb(233, 20, 37), rgb(15, 16, 15));
 }
 
-.doneButton {
-    font-size: 2vw;
-    position: relative;
-    left: 50%;
+.closeButton {
+    font-size: 1.5vw;
+    color: black;
+    background-color: greenyellow;
 }
 
-.doneButton:hover {
+#close {
+    display: grid;
+    justify-content: center;
+}
+
+.closeButton:hover {
     background-image: linear-gradient(rgb(15, 1, 1), rgb(24, 54, 224), rgb(15, 16, 15));
 }
 
 .accounts {
-    font-size: 2vw;
+    font-size: 1.5vw;
     display: flex;
     align-content: center;
     margin: 0 auto;
 }
 
 .editSubmitButtons {
-    display: flex;
-    justify-content: right;
+    display: grid;
+    justify-content: center;
+    
 }
 
 .option {
@@ -79,9 +96,12 @@ thead {
     margin: 0 1vw;
 }
 
-.body{
-    position: relative;
-    top: 15vh; 
+.body {
+    transform: translateY(25vh);
+}
+
+.trash {
+    transform: translate(1.2vw, -4vh);
 }
 
 body {

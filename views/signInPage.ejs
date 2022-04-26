@@ -17,31 +17,43 @@
 
 <body>
 
-  <div class="image">
+  <div class="bodyContainer">
 
-    <form class="form container" action="/songsLib" method="POST">
+    <form class="form container" action="/signIn" method="POST">
 
-      <h1>Please sign in.</h1>
+      <div class="body">
+        <h1>Please sign in.</h1>
 
-      <div class="containerParent">
-        <label class='label' for="name">E-mail:</label>
-        <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
-        <label class='label' for="name">Password:</label>
-        <!-- This line below sets the eye icon -->
-        <input id="password" class='input font row' type='password' name='password' placeholder="Password">
-        <i class="eye fa-solid fa-eye-slash"></i>
+        <div id="emaiToBottom">
+
+        </div>
+        <div class="containerParent">
+          <label id="emailLabel" class='label' for="name">E-mail:</label>
+          <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
+          <label id="passwordLabel" class='label' for="name">Password:</label>
+
+          <div id="passwordField">
+            <!-- This line below sets the eye icon -->
+            <input id="password" class='input font row' type='password' name='password' placeholder="Password">
+            <i class="eye fa-solid fa-eye-slash"></i>
+          </div>
+        </div>
+
+        <div class="submitAndCancelButtons">
+          <div>
+            <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
+          </div>
+          <div>
+            <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+          </div>
+        </div>
+
+        <div id="forgetContainer">
+          <a class='forget' href="/forgetPage">Forgot your email?</a>
+          <a class='forget' href="/forgetPage">Forgot your password?</a>
+        </div>
       </div>
 
-
-
-      <div class="submitAndCancelButtons">
-        <div>
-          <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
-        </div>
-        <div>
-          <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
-        </div>
-      </div>
     </form>
 
   </div>
