@@ -27,6 +27,12 @@ input {
     height: 100vh;
 }
 
+/* Published time */
+#pushedTime{
+    color: chartreuse;
+    font-size: medium;
+}
+
 /* This contains all videos */
 .container {
     display: grid;
@@ -41,12 +47,6 @@ input {
     justify-content: center;
     position: relative;
     top: 5vh;
-}
-
-/* All vidoes */
-.allVideos {
-    position: relative;
-    top: -60vh;
 }
 
 /* The video link */

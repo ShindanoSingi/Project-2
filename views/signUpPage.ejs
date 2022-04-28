@@ -43,23 +43,27 @@
               <input class='input font' type='password' name='password' placeholder="Password" />
             </div>
 
-            <div class="gender row">
-              <label class='label' for="name">Gender</label>
-              <input class='input font' type='text' name='gender' placeholder="Gender" />
-            </div>
           </div>
 
           <div class="submitAndCancelButtons">
             <input class='btn btn-primary btn-lg button font submit' value="Sign up" type="submit" />
             <a class='btn btn-secondary btn-lg button font cancel' href="/homePage">Cancel</a>
+
+
           </div>
 
         </div>
 
+        <h1><%=errorMessage %> </h1>
       </form>
 
     </div>
+    <script>
+      if (errorMessage !== "") {
+        document.querySelector('.inputParent').style.zIndex = "-1";
 
+      }
+    </script>
   </Div>
 </body>
 

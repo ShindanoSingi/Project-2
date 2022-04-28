@@ -25,7 +25,6 @@ thead {
     font-size: 1.5vw;
     padding: 0px 5px;
     margin-right: 3vw;
-    padding-bottom: -6vh;
     width: 6vw;
 }
 
@@ -34,12 +33,12 @@ thead {
 }
 
 .crayon {
-    transform: translate(0vw, 1vh);
+    transform: translate(0vw, 0.4vh);
 }
 
 #actionDelete {
     font-size: 1.5vw;
-    padding: 8px 5px;
+    padding: 3px 2px;
     margin-right: -4vw;
     margin-left: 1.5vw;
     width: 6vw;
@@ -74,7 +73,6 @@ thead {
 .editSubmitButtons {
     display: grid;
     justify-content: center;
-    
 }
 
 .option {

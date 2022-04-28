@@ -22,20 +22,40 @@
     <form class="form container" action="/signIn" method="POST">
 
       <div class="body">
+
         <h1>Please sign in.</h1>
 
-        <div id="emaiToBottom">
-
-        </div>
         <div class="containerParent">
           <label id="emailLabel" class='label' for="name">E-mail:</label>
           <input id="email" class='input font row' type='text' name='email' placeholder="E-mail">
           <label id="passwordLabel" class='label' for="name">Password:</label>
 
+          <!-- I HAVE ALSO USED DOM -->
+
+          <script>
+            function clickEye() {
+
+              // Show the password when the eye icon is clicked
+              document.querySelector('#password').type = 'text';
+
+              // Wait for 0.5 second, then Call the function "hidePassword" function
+              setTimeout(func, 500)
+            }
+
+            // Set password to password type after a second
+            let func = () => {
+              document.querySelector('#password').type = 'password';
+            }
+            
+          </script>
+
           <div id="passwordField">
             <!-- This line below sets the eye icon -->
             <input id="password" class='input font row' type='password' name='password' placeholder="Password">
-            <i class="eye fa-solid fa-eye-slash"></i>
+
+            <!-- To tie the icon eye to the function ==> onClick="clickEye(), then   <script> function clickEye() { name = 'text' }
+                    </script> -->
+            <i class="eye fa-solid fa-eye-slash" onClick="clickEye()"></i>
           </div>
         </div>
 

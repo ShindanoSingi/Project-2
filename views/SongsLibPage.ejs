@@ -41,8 +41,15 @@
 
         <!-- This is the youtube link to the video -->
         <div class="title">
-          <a href="https://www.youtube.com/watch_popup?v=<%=song.id.videoId%>" target="_blank"><%=song.snippet.title%><%=song.publishedAt %></a>
-        </div> 
+          <a href="https://www.youtube.com/watch_popup?v=<%=song.id.videoId%>" target="_blank"><%=song.snippet.title%></a>
+
+          <!-- Format the time -->
+          <p id="pushedTime">
+            Published Time: <%=song.snippet.publishedAt.substring(5,7)%>/<%=song.snippet.publishedAt.substring(8,10)%>/<%=song.snippet.publishedAt.substring(0,4)%> at <%=song.snippet.publishedAt.substring(11,19)%>
+          </p>
+
+        </div>
+
       </div>
 
       <% }); %>

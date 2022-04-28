@@ -2,42 +2,52 @@ const mongoose = require('../db/connection')
 
 // Structure data in database
 const UserSchema = new mongoose.Schema(
+    
     {
         firstName: {
             type: String,
-            required: true
+            required: true,
+            max: 255,
+            min: 2
         },
+
         middleName: {
             type: String,
-            required: false
+            required: false,
+            min: 0
+
         },
+
         lastName: {
             type: String,
-            required: true
+            required: true,
+            max: 255,
+            min: 2
         },
-        gender: {
-            type: String,
-            required: true
-        },
+
         email: {
             type: String,
-            required: true
+            required: true,
+            max: 255,
+            min: 6
         },
+
         password: {
             type: String,
-            required: true
-        },
-        status: {
-            type: String,
             required: true,
-            default: true
-        }
+            max: 1024,
+            min: 6
+        },
+
+        date: {
+            type: String,
+            default: Date.now
+        },
+
+        verified: Boolean,
+
+        status: String,
     },
-
-    {
-
-        timestamps: String
-    }
 
 );
 

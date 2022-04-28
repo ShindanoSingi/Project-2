@@ -83,6 +83,15 @@ let url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResu
 // I have used this youtube to understand how to work with axios, API, ejs and controller
 https://www.youtube.com/watch?v=6LaGLqUHKms 
 
+// I watched this video to figure out how to integrate google verification into my app
+
+// I read on this page on how to use a patern
+http://www.javascriptkit.com/javatutors/re.shtml
+
+// I watched this for validating the email
+https://www.youtube.com/watch?v=2jqok-WgelI
+
+
 // I hid my API key by doing this // This API searches by title
     let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1000000000&q=${searchedWord}&key=${process.env.API_KEY}`;
 
@@ -904,3 +913,71 @@ module.exports = Song;
     }
 
 }
+
+
+
+
+
+
+
+// Add a user to the database, then go to the home screen
+router.post("/signUp", (req, res) => {
+
+    // Create a user object
+    let userObject = { firstName, middleName, lastName, gender, email, password } = req.body;
+
+    // Remove/trim extra spaces
+    let userFirstName = userObject.firstName.trim()
+    let userLastName = userObject.lastName.trim()
+    let userGender = userObject.gender.trim()
+    let userEmail = userObject.email.trim()
+    let userPassword = userObject.password.trim()
+
+    // Return a fail message if one the condition below fails
+    if ((userFirstName === "") || (userLastName === "") || (userGender === "") || (userEmail === "") || (userPassword === "")) {
+        const statusMessage = {
+            status: "FAILED",
+            message: "Fill in empty input"
+        }
+    }
+
+    // To check the user's first name matched the pattern specified below.
+    // Source: http://www.javascriptkit.com/javatutors/re.shtml
+    else if (!/^[a-zA-Z ]*$/.test(userFirstName)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid first name was entered!"
+        })
+    }
+
+      // To check the user's last name matched the pattern specified below.
+    // Source: http://www.javascriptkit.com/javatutors/re.shtml
+    else if (!/^[a-zA-Z ]*$/.test(userLastName)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid first name was entered!"
+        })
+    }
+
+    // To check the user's email matched the pattern specified below.
+    // Source: http://www.javascriptkit.com/javatutors/re.shtml
+    else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid name was entered!"
+        })
+
+    }
+
+
+https://www.delftstack.com/howto/javascript/javascript-convert-timestamp-to-date/
+
+    var timestamp = 1607110465663
+var date = new Date(timestamp);
+
+console.log("Date: "+date.getDate()+
+          "/"+(date.getMonth()+1)+
+          "/"+date.getFullYear()+
+          " "+date.getHours()+
+          ":"+date.getMinutes()+
+          ":"+date.getSeconds());

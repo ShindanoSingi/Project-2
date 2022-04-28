@@ -1,5 +1,5 @@
 require('dotenv').config()
-const User = require("../models/users-models");
+const User = require("../models/users-model");
 const seedData = require("./users.json");
 
 User.deleteMany({})

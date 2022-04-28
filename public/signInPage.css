@@ -231,7 +231,7 @@
         padding-left: 3vw;
     }
 
-    /* Style the yes icon */
+    /* Style the eye icon */
     div>.eye {
         font-size: 3vw;
         color: rgb(183, 138, 67);
@@ -544,6 +544,7 @@
         width: 60vw;
         display: grid;
         justify-content: center;
+        margin: 0 auto;
     }
 
     /* Style submit button */
