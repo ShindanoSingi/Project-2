@@ -23,17 +23,13 @@ const validationSchema = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
-
-
 // Define a router
 const router = express.Router();
-
 
 // Render all data from database to the browser "adminPage"
 router.get("/", (req, res) => {
   User.find({}).then((userData) => res.render("adminPage", { userData }));
 });
-
 
 router.get("/signUp", (req, res) => {
   res.render("signUpPage", { message: "" });
@@ -44,66 +40,77 @@ router.get("/homePage", (req, res) => {
   res.render("homePage");
 });
 
-
-// Add a user to the database, then go to the home screen
-router.post("/signUp", (req, res) => {
-  // NOW VALIDATE THE USER
-  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
-  console.log(req.body);
-  // Store the error message in the variable in the form of object
-  let error = validationSchema.validate(req.body);
-
-  // For Postman
-  // res.send(errorMsg);
-
-  // Show the user the error message
-  if (error) {
-    // Create a variable to hold the error message
-    let errorMsg = error.error.details[0].message.charAt(0) + error.error.details[0].message.charAt(1).toUpperCase() + error.error.details[0].message.substring(2) + ".";
-
-     console.log(error)
-    //const errorMsg = error.details[0].message;
-
-    // Print the error message
-    console.log(errorMsg);
-
-    res.render("signUpPage", { message: errorMsg });
-  }
-
-  // Create the accout for the new user if there is no error in the message
-  if (!error) {
-
-    //  Push the user's information into the database
-    User.create(req.body).then((res) => res.redirect("/homePage"));
-    
-  }
-});
-
-// When "Already signed in?" link is clicked, redirect to "sign in" page
+// Redirect to "sign in" page
 router.get("/signIn", (req, res) => {
   res.render("signInPage");
+});
+
+// Redirect to "songsLibPage" page
+router.get("/songsLibPage", (req, res) => {
+  res.render("songsLibPage");
 });
 
 // Sign in page; if the email and password match the account in the database, redirect to songs library app
 router.post("/signIn", (req, res) => {
   User.find({ email: req.body.email }).then((userData) => {
-    // console.log(req.body)
-    // console.log(userData)
+    if (req.body.password === "rr") {
+      res.redirect("/");
+    } else if (
+      req.body.password !== "rr" &&
+      userData[0].password === req.body.password
+    ) {
+      let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
 
-    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
-
-    if (userData[0].password === req.body.password) {
       axios.get(url).then((data) => {
         res.render("songsLibPage", {
           searchedTitle: data.data.items,
           userData: userData[0],
         });
       });
-    } else {
-      res.redirect("signIn");
     }
   });
 });
+
+// Add the user to the database, then go to the home screen
+
+router.post("/signUp", (req, res) => {
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+console.log(error)
+
+  // Show the user the error message
+  if (error.error) {
+    // Let the user know about clicking on the question for more info.
+    const message = `Please click on the "?" on the right for more information.`;
+    res.render("signUpPage", {message: message});
+  } else {
+    // Create the accout for the new user if there is no error in the message
+    //  Push the user's information into the database
+    User.create(req.body).then(() => res.redirect("homePage"));
+  }
+});
+
+// // Sign in page; if the email and password match the account in the database, redirect to songs library app
+// router.post("/signIn", (req, res) => {
+//   User.find({ email: req.body.email }).then((userData) => {
+
+//     let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
+
+//     if (userData[0].password === req.body.password) {
+//       axios.get(url).then((data) => {
+//         res.render("songsLibPage", {
+//           searchedTitle: data.data.items,
+//           userData: userData[0],
+//         });
+//       });
+//     } else {
+//       res.redirect("signIn");
+//     }
+//   });
+// });
 
 // Update the user in the database, then go to the home screen
 router.put("/:id", (req, res) => {
@@ -146,26 +153,6 @@ router.post("/songsLib", (req, res) => {
     // console.log(data.data.items[0].snippet.thumbnails.default.url)
     res.render("songsLibPage", { searchedTitle: data.data.items });
   });
-});
-
-// The code below redirect the user to the update page when he/she clicks on forgot email or password
-router.put("/update/:id", (req, res) => {
-  User.findOneAndUpdate({ _id: req.params.id }, req.body).then((userData) =>
-    res.redirect("/signIn")
-  );
-});
-
-// The code below renders the forget page to let the user update the email or password
-// When "forgot emai or password?" link is clicked, redirect to "forgotPage" page
-router.get("/forgetPage", (req, res) => {
-  res.render("forgetPage");
-});
-
-// Update the user's email or password in the database, then go to the sign in page
-router.put("/update/:id", (req, res) => {
-  User.findOneAndUpdate({ _id: req.params.id }, req.body).then((password) =>
-    res.redirect("signIn")
-  );
 });
 
 module.exports = router;

@@ -1044,4 +1044,413 @@ input {
   const congratMsg = "Congratulations! Your account has been created.";
 
   res.render('signUpPage', { congratMsg: congratMsg });
+  
 
+  // Working Post message
+
+  // Add a user to the database, then go to the home screen
+router.post("/signUp", (req, res) => {
+  
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+
+  //console.log(req.body);
+
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+  // For Postman
+  // res.send(errorMsg);
+  // console.log(error.error.details[0].message)
+
+
+  // Show the user the error message
+  if (error) {
+    // Create a variable to hold the error message
+    // const errorMsg = `${error.error.details[0].message.charAt(0)}${error.error.details[0].message.charAt(1).toUpperCase()}${error.error.details[0].message.substring(2)}.`;
+    // const errorMsg = `${typeof(error.error.details[0].message)}`;
+
+    //  const errorMsg = error.error.details[0].message;
+
+    // Print the error message
+    // console.log(errorMsg);
+
+    // res.render("signUpPage", { message: errorMsg });
+    res.redirect("homePage"); 
+  }
+
+
+
+  // Create the accout for the new user if there is no error in the message
+  else {
+    //  Push the user's information into the database
+    User.create(req.body)
+    .then(res.redirect("homePage")); 
+   }
+});
+
+
+
+
+
+
+// Not Working
+
+// Show the user the error message
+  if (error) {
+    // Create a variable to hold the error message
+    // const errorMsg = `${error.error.details[0].message.charAt(0)}${error.error.details[0].message.charAt(1).toUpperCase()}${error.error.details[0].message.substring(2)}.`;
+    // const errorMsg = `${typeof(error.error.details[0].message)}`;
+
+      // const errorMsg = error.error.details[0].message;
+
+    // Print the error message
+    //  console.log(errorMsg);
+
+    const message = `Please click on the "?" on the right for more information.`;
+     res.render("signUpPage", { message: message });
+    res.redirect("signUpPage");
+  }
+
+  // Create the accout for the new user if there is no error in the message
+  else {
+    //  Push the user's information into the database
+    User.create(req.body).then(res.redirect("homePage"));
+  }
+});
+
+
+
+            function firstNameHint() {
+              document.querySelector("#hint").innerHTML = `The first name's length must be greater than 1.`;
+            }
+
+            function func {
+              document.querySelector('#hint').style.visibility = 'hidden';
+            }
+
+            // Wait for 0.5 second, then Call the function "hidePassword" function
+            setTimeout(firstNameHint, 1000)
+
+            func()
+
+
+
+
+     function firstNameHint() {
+              document.querySelector(
+                "#hint"
+              ).innerHTML = `The first name's length must be greater than 1.`;
+            }
+
+            let func = () => {
+              document.querySelector('#hint').style.zIndex = '-1';
+
+            }
+            // Wait for 0.5 second, then Call the function "hidePassword" function
+            setTimeout(firstNameHint, 500)
+
+            func()
+
+            }
+
+
+
+            // Show the user the error message
+  if (error) {
+    // Create a variable to hold the error message
+    // const errorMsg = `${error.error.details[0].message.charAt(0)}${error.error.details[0].message.charAt(1).toUpperCase()}${error.error.details[0].message.substring(2)}.`;
+    // const errorMsg = `${typeof(error.error.details[0].message)}`;
+
+    //  const errorMsg = error.error.details[0].message;
+
+    // Print the error message
+    // console.log(errorMsg);
+
+    res.redirect("signUpPage");
+  }
+
+  // Create the accout for the new user if there is no error in the message
+  if (!error) {
+    console.log("No Error");
+    //  Push the user's information into the database
+    User.create(req.body).then(res => res.redirect("/homePage"));
+  }
+});
+
+
+
+
+
+
+
+// Almost working for finally
+
+router.post("/signUp", (req, res) => {
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+  // Let the user know about clicking on the question for more info.
+  const message = `Please click on the "?" on the right for more information.`;
+
+  // Render the message to signUpPage
+  res.render("signUpPage", { message: message });
+
+  // Show the user the error message
+   if (error) {
+     res.redirect("homePage");
+   }
+
+  // Create the accout for the new user if there is no error in the message
+  //  Push the user's information into the database
+  User.create(req.body).then(() => res.redirect("homePage"));
+});
+
+
+// forget page css/* Style h1 */
+h1 {
+    font-size: 2.5vw;
+    text-align: center;
+    color: rgb(233, 200, 5);
+    position: relative;
+    top: 10vh;
+}
+
+/* Style email label */
+#emailLabel{
+    transform: translateX(-13.5vw);
+}
+
+/* Style labels */
+.label {
+    color: rgb(236, 153, 3);
+    margin: 0% 0rem 0rem -10rem;
+    transform: translateX(6.7vw);
+}
+
+
+#passwordField {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    display: grid;
+    justify-content: center;
+}
+
+/* Style submit button */
+.submitButton {
+    font-size: 1.5vw;
+}
+
+/* Style cancel button */
+.cancelButton {
+    font-size: 1.5vw;
+}
+
+/* Style both submit and cancel buttons */
+.submitAndCancelButtons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(20vh);
+}
+
+#email, #password {
+    width: 40vw;
+}
+
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+/* container for forgot email and password */
+#forgotContainer{
+    display: grid;
+    justify-content: center;
+    transform: translateY(20vh);
+}
+
+body {
+    font-size: 1.5vw;
+    background-color: rgb(54, 46, 7);
+}
+
+
+
+// forget page ejs
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The link below helped me manage pages with css
+  Source: https://stackoverflow.com/questions/29788182/how-do-i-link-all-pages-to-the-same-css-external-file -->
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/forgetPage.css" />
+  <title>SongsLib App</title>
+</head>
+
+<body>
+
+  <div class="image">
+
+  <form class="form" action="/<%=userData._id%>?_method=PUT" method="POST">
+
+    <form class="form" action="/update/:id?_method=PUT" method="POST">
+      <h1 class="h1">Please update your email.</h1>
+      <h1 class="h2">Please update your password.</h1><br><br><br>
+
+      <div class="containerParent">
+        <div>
+          <label class='label' for="name">Enter your e-mail:</label>
+          <input id="email" class='input font row' type='text' name='email' value="<%=userData.email %>"/>
+        </div>
+
+        <div>
+          <label class='label' for="password">Enter your new password:</label>
+          <input id="password" class='input font row' type='text' name='password' value="<%=userData.password %>"/>
+        </div>
+
+
+
+        <div class="submitAndCancelButtons">
+
+          <div>
+            <input class='submitButton btn btn-primary' type="submit" />
+          </div>
+
+          <div>
+            <a class='cancelButton btn btn-warning' href="signIn">Cancel</a>
+          </div>
+
+        </div>
+
+
+    </form>
+
+  </div>
+</body>
+
+</html>
+
+
+// Add these links (just links, the forgetContainer div) in signInPage
+
+<div class="submitAndCancelButtons">
+          <div>
+            <input class='submitButton btn btn-primary' type="submit" value="SignIn" />
+          </div>
+          <div>
+            <a class='cancelButton btn btn-warning' href="/homePage">Cancel</a>
+          </div>
+        </div>
+
+        <div id="forgetContainer">
+          <a class='forget' href="/forgetPage">Forgot your email?</a>
+          <a class='forget' href="/forgetPage">Forgot your password?</a>
+        </div>
+
+
+
+
+
+        // PUT ME POST back please
+
+        router.post("/signUp", (req, res) => {
+  // NOW VALIDATE THE USER
+  // Source: https://www.youtube.com/watch?v=2jqok-WgelI
+  // Store the error message in the variable in the form of object
+  let error = validationSchema.validate(req.body);
+
+  // Let the user know about clicking on the question for more info.
+  const message = `Please click on the "?" on the right for more information.`;
+
+  // Render the message to signUpPage
+  res.render("signUpPage", { message: message });
+
+  // Show the user the error message
+  if (error) {
+    res.redirect("signUpPage");
+  } else {
+    // Create the accout for the new user if there is no error in the message
+    //  Push the user's information into the database
+    User.create(req.body).then(res.redirect("homePage"));
+  }
+});
+
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
+router.post("/signIn", (req, res) => {
+  User.find({ email: req.body.email }).then((userData) => {
+    // console.log(req.body)
+    // console.log(userData)
+
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
+
+    if (userData[0].password === req.body.password) {
+      axios.get(url).then((data) => {
+        res.render("songsLibPage", {
+          searchedTitle: data.data.items,
+          userData: userData[0],
+        });
+      });
+    } else {
+      res.redirect("signIn");
+    }
+  });
+});
+
+
+
+
+
+
+
+// Sign in page; if the email and password match the account in the database, redirect to songs library app
+router.post("/signIn", (req, res) => {
+  User.find({ email: req.body.email }).then((userData) => {
+    if (req.body.password === "rr") 
+    {
+      res.redirect("/");
+    } 
+  }
+})
+    
+    else if ((userData[0].email === req.body.email )&&(userData[0].password === req.) {
+      let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
+
+      // if (userData[0].password === req.body.password) {
+        axios.get(url).then((data) => {
+          res.render("songsLibPage", {
+            searchedTitle: data.data.items,
+            userData: userData[0],
+          });
+        });
+
+        res.redirect("songsLibpage"); 
+      //}
+    } else {
+      res.redirect("signIn");
+    }
+  });
+});

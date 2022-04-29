@@ -2,7 +2,7 @@
 
 /* Mobile devices */
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
 
     /* h1 */
     h1 {
@@ -65,6 +65,30 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
     }
 
     /* Both forgot eamail and password */
@@ -143,6 +167,29 @@
         justify-content: center;
     }
 
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        z-index: -1;
+    }
+
     /* Both forgot eamail and password */
     body {
         background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
@@ -218,6 +265,30 @@
         justify-content: center;
     }
 
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
     /* Both forgot eamail and password */
     body {
         background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
@@ -230,8 +301,9 @@
 /* For Big TV's (HD Screens */
 
 @media screen and (max-width: 1280px) {
-     /* h1 */
-     h1 {
+
+    /* h1 */
+    h1 {
         font-size: 5vw;
         text-align: center;
         color: white;
@@ -292,6 +364,30 @@
         justify-content: center;
     }
 
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
     /* Both forgot eamail and password */
     body {
         background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
@@ -304,129 +400,40 @@
 /* For Projector */
 
 @media screen and (max-width: 1920px) {
-   /* h1 */
-   h1 {
-    font-size: 2.5vw;
-    text-align: center;
-    color: white;
-    transform: translateY(-2vh);
-}
 
-/* input boxes */
-.input {
-    border-radius: 15px;
-}
-
-/* Submit button */
-.submit {
-    border-radius: 15px;
-    font-size: 1.5vw;
-}
-
-/* Cancel button */
-.cancel {
-    border-radius: 15px;
-    font-size: 1.5vw;
-    margin: 0 3vw;
-}
-
-/* Labels */
-.label {
-    font-size: 1.7vw;
-    color: rgb(6, 240, 240);
-    transform: translateX(-0.5vw);
-}
-
-/* center all elements in the body */
-.inputParent {
-    width: 40vw;
-    font-size: 1.5vw;
-    display: grid;
-    justify-content: center;
-    transform: translateY(-15vh);
-}
-
-/* Backgrounf image */
-.image {
-    background-image: url("images/newHomeImage.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Submit and cancel buttons */
-.submitAndCancelButtons {
-    transform: translateY(8vh);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-/* Blink the error message by changing the color from yellow to red */
-@keyframes errorMsg {
-    from {color: yellow;}
-    to {color: red;}
-}
-
-/* Format the error message */
-#error{
-color: yellow;
-animation: errorMsg;
- animation-duration: 0.5s;
- animation-iteration-count: infinite;
- text-align: center;
- position: relative;
- top: 2vh;
-}
-
-/* Both forgot eamail and password */
-body {
-    background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
-}  
-}
-
-
-
-/* For 4K display */
-
-@media screen and (max-width: 3840px) {
-      /* h1 */
-      h1 {
+    /* h1 */
+    h1 {
         font-size: 2.5vw;
         text-align: center;
         color: white;
         transform: translateY(-2vh);
     }
-    
+
     /* input boxes */
     .input {
         border-radius: 15px;
     }
-    
+
     /* Submit button */
     .submit {
         border-radius: 15px;
         font-size: 1.5vw;
     }
-    
+
     /* Cancel button */
     .cancel {
         border-radius: 15px;
         font-size: 1.5vw;
         margin: 0 3vw;
     }
-    
+
     /* Labels */
     .label {
         font-size: 1.7vw;
         color: rgb(6, 240, 240);
-        transform: translateX(-0.2vw);
+        transform: translateX(-0.5vw);
     }
-    
+
     /* center all elements in the body */
     .inputParent {
         width: 40vw;
@@ -435,7 +442,9 @@ body {
         justify-content: center;
         transform: translateY(-15vh);
     }
-    
+
+  
+
     /* Backgrounf image */
     .image {
         background-image: url("images/newHomeImage.png");
@@ -447,7 +456,7 @@ body {
         align-items: center;
         height: 100vh;
     }
-    
+
     /* Submit and cancel buttons */
     .submitAndCancelButtons {
         transform: translateY(8vh);
@@ -455,9 +464,146 @@ body {
         flex-direction: row;
         justify-content: center;
     }
-    
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        z-index: -1;
+    }
+
     /* Both forgot eamail and password */
     body {
         background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
-    } 
+    }
+}
+
+
+
+/* For 4K display */
+
+@media screen and (max-width: 3840px) {
+
+    /* h1 */
+    h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-2vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 1.5vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 1.5vw;
+        margin: 0 3vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 1.7vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 1.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-15vh);
+    }
+
+      /* Style all question mark icons */
+      .questionMark{
+        font: 50vw; 
+        color: rgb(246, 35, 3);
+        transform: translate(41vw, -4.2vh);
+        margin-bottom: -30vh;
+    }
+
+    #hint{
+        font-size: 1vw;
+        color: rgb(232, 244, 6);
+        margin: 2vw;
+        text-align: center;
+        visibility: visible;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
 }
