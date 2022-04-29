@@ -1,8 +1,9 @@
+const { date } = require('@hapi/joi');
 const mongoose = require('../db/connection')
 
 // Structure data in database
 const UserSchema = new mongoose.Schema(
-    
+
     {
         firstName: {
             type: String,
@@ -39,15 +40,12 @@ const UserSchema = new mongoose.Schema(
             min: 6
         },
 
-        date: {
-            type: String,
+        createdAt: {
+            type: Date,
             default: Date.now
+
         },
-
-        verified: Boolean,
-
-        status: String,
-    },
+    }
 
 );
 

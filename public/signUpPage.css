@@ -366,6 +366,12 @@
     justify-content: center;
 }
 
+/* Format the error message */
+#error{
+color: azure;
+font-size: 50px;
+}
+
 /* Both forgot eamail and password */
 body {
     background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
