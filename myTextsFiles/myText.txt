@@ -183,7 +183,8 @@ https://fontawesome.com/search?q=search&s=solid%2Cbrands
 
 
 
-
+API KEYS:
+AIzaSyCLm7XDlOKUwWAVRcNWe2e9JiWEucEoln4
 
 
 
@@ -981,3 +982,66 @@ console.log("Date: "+date.getDate()+
           " "+date.getHours()+
           ":"+date.getMinutes()+
           ":"+date.getSeconds());
+
+
+
+  //     else
+  //     {
+  //         // Thank the user for signing up
+  //         // Create a variable to hold the "thanks" message
+  //         let thanksMessage = "Thanks for signing up";
+
+  //         console.log(thanksMessage)
+
+  //         // Render the thanks message to the sign up page
+  //      res.render('signUpPage', { thanks: thanksMessage });
+
+  //         //  Push the user's information into the database
+  //         User.create((req.body))
+
+  //         // Redirect the user to home page
+  //      res.redirect('/homePage')
+  //    }
+
+
+
+
+@media screen and (max-width: 480px) {
+ /* Search icon */
+ #searchIcon {
+    font-size: 1vw;
+    transform: translate(21vw, -97.8vh);
+    color: rgb(246, 5, 82);
+}
+
+/* Style the input box */
+input {
+    font-size:xx-small;
+    width: 50vw;
+    border-radius: 30px;
+    padding-left: 2vw;
+}
+
+/* The globe icon */
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    background-position-y: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+   
+
+}
+
+
+ // Send a message to the user to congratulate him/her on signing up
+  const congratMsg = "Congratulations! Your account has been created.";
+
+  res.render('signUpPage', { congratMsg: congratMsg });
+

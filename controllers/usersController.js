@@ -23,89 +23,60 @@ const validationSchema = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
+
+
 // Define a router
 const router = express.Router();
+
 
 // Render all data from database to the browser "adminPage"
 router.get("/", (req, res) => {
   User.find({}).then((userData) => res.render("adminPage", { userData }));
 });
 
+
 router.get("/signUp", (req, res) => {
-  res.render("signUpPage");
+  res.render("signUpPage", { message: "" });
 });
+
+// Route to home page
+router.get("/homePage", (req, res) => {
+  res.render("homePage");
+});
+
 
 // Add a user to the database, then go to the home screen
 router.post("/signUp", (req, res) => {
-  // console.log(req.body)
-
-  // // Declare variables for to hold users attributes
-  // let userFirstName = req.body.firstName;
-  // let userLastName = req.body.lastName;
-  // let userEmail = req.body.email;
-  // let userPassword = req.body.password;
-
-  // // Remove/trim extra spaces
-  // userFirstName.trim();
-  // userLastName.trim();
-  // userEmail.trim();
-  // userPassword.trim();
-
   // NOW VALIDATE THE USER
   // Source: https://www.youtube.com/watch?v=2jqok-WgelI
   console.log(req.body);
   // Store the error message in the variable in the form of object
-  let  error  = validationSchema.validate(req.body);
-  // console.log(error)
-  // // Format the error message
-  //  let errorMsg = (error.details[0].message.charAt(0) + error.details[0].message.charAt(1).toUpperCase() + error.details[0].message.substring(2) + ".");
+  let error = validationSchema.validate(req.body);
 
-  console.log(typeof(error.details));
-  const errorMsg = error.error.details[0].message;
-  res.send(errorMsg)
-
-  // Create a variable to hold the error message
-  //const errorMsg =
-
-  // Create a variable to hold the solution to the error message
-
-  //res.send(error)
+  // For Postman
+  // res.send(errorMsg);
 
   // Show the user the error message
   if (error) {
-    res.render("signUpPage", {message: errorMsg});
+    // Create a variable to hold the error message
+    let errorMsg = error.error.details[0].message.charAt(0) + error.error.details[0].message.charAt(1).toUpperCase() + error.error.details[0].message.substring(2) + ".";
+
+     console.log(error)
+    //const errorMsg = error.details[0].message;
+
+    // Print the error message
+    console.log(errorMsg);
+
+    res.render("signUpPage", { message: errorMsg });
   }
 
   // Create the accout for the new user if there is no error in the message
   if (!error) {
+
     //  Push the user's information into the database
-    User.create(req.body)
-
-      .then((res) => 
-      res.redirect("/homePage"));
+    User.create(req.body).then((res) => res.redirect("/homePage"));
+    
   }
-
-  //     else
-  //     {
-  //         // Thank the user for signing up
-  //         // Create a variable to hold the "thanks" message
-  //         let thanksMessage = "Thanks for signing up";
-
-  //         console.log(thanksMessage)
-
-  //         // Render the thanks message to the sign up page
-  //      res.render('signUpPage', { thanks: thanksMessage });
-
-  //         //  Push the user's information into the database
-  //         User.create((req.body))
-
-  //         // Redirect the user to home page
-  //      res.redirect('/homePage')
-  //    }
-});
-
-router.get("/homePage", (req, res) => {
-  res.render("homePage");
 });
 
 // When "Already signed in?" link is clicked, redirect to "sign in" page

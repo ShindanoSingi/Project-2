@@ -366,10 +366,21 @@
     justify-content: center;
 }
 
+/* Blink the error message by changing the color from yellow to red */
+@keyframes errorMsg {
+    from {color: yellow;}
+    to {color: red;}
+}
+
 /* Format the error message */
 #error{
-color: azure;
-font-size: 50px;
+color: yellow;
+animation: errorMsg;
+ animation-duration: 0.5s;
+ animation-iteration-count: infinite;
+ text-align: center;
+ position: relative;
+ top: 2vh;
 }
 
 /* Both forgot eamail and password */

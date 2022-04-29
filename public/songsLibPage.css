@@ -7,10 +7,10 @@
 
 /* Style the input box */
 input {
-    font-size: 1.5vw;
+    font-size: vw;
     width: 40vw;
     border-radius: 30px;
-    padding-left: 1vw;
+    padding-left: 2vw;
 }
 
 /* The globe icon */
@@ -39,6 +39,7 @@ input {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(285px, max-content));
     grid-gap: 3vw;
+    transform: translateY(-800px);
 }
 
 /* The top part above all videos */
@@ -58,12 +59,12 @@ input {
 }
 
 /* My signature */
-.jinaLangu {
+/* .jinaLangu {
     font-size: 0.1vw;
     transform: translate(17.7vw, -98vh);
     position: relative;
     color: rgb(3, 65, 52);
-}
+} */
 
 /* This holds the input box and the icon */
 .search {
@@ -76,36 +77,3 @@ body {
 }
 
 
-
-@media screen and (max-width: 480px) {
- /* Search icon */
- #searchIcon {
-    font-size: 1vw;
-    transform: translate(21vw, -97.8vh);
-    color: rgb(246, 5, 82);
-}
-
-/* Style the input box */
-input {
-    font-size:xx-small;
-    width: 50vw;
-    border-radius: 30px;
-    padding-left: 2vw;
-}
-
-/* The globe icon */
-.image {
-    background-image: url("images/newHomeImage.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50%;
-    background-position-y: 0vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
-   
-
-}
