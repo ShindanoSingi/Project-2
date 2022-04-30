@@ -59,7 +59,7 @@ router.post("/signIn", (req, res) => {
       req.body.password !== "rr" &&
       userData[0].password === req.body.password
     ) {
-      let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=500&q=${userTitle.title}&key=${process.env.API_KEY}`;
+      let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${userTitle.title}&key=${process.env.API_KEY}`;
 
       axios.get(url).then((data) => {
         res.render("songsLibPage", {

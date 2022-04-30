@@ -1,79 +1,70 @@
- /* Search icon */
- #searchIcon {
-    font-size: 1.5vw;
-    transform: translate(18vw, -94.5vh);
-    color: rgb(246, 5, 82);
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 2.5vw;
+        transform: translate(23vw, -90.5vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 2vw;
+        width: 50vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: -4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 0.8vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+    a {
+        text-align: center;
+        font-size: 1vw;
+        text-decoration: none;
+        
+    }
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
+        padding: 0 3vw;
+        transform: translateY(-55vh);
+    }
+
+    body {
+        background-color: black;
+    }
+
 }
-
-/* Style the input box */
-input {
-    font-size: vw;
-    width: 40vw;
-    border-radius: 30px;
-    padding-left: 2vw;
-}
-
-/* The globe icon */
-.image {
-    background-image: url("images/newHomeImage.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 20%;
-    background-position-y: -4vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Published time */
-#pushedTime{
-    color: chartreuse;
-    font-size: medium;
-}
-
-/* This contains all videos */
-.container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(285px, max-content));
-    grid-gap: 3vw;
-    transform: translateY(-800px);
-}
-
-/* The top part above all videos */
-.containerSearch {
-    display: grid;
-    justify-content: center;
-    position: relative;
-    top: 5vh;
-}
-
-/* The video link */
-.title, a:link, a:visited, a:hover, a:active {
-    font-size: medium;
-    padding: 0vh 1.2vw 0vh 0.2vw;
-    text-decoration: none;
-    color: rgb(242, 242, 246);
-}
-
-/* My signature */
-/* .jinaLangu {
-    font-size: 0.1vw;
-    transform: translate(17.7vw, -98vh);
-    position: relative;
-    color: rgb(3, 65, 52);
-} */
-
-/* This holds the input box and the icon */
-.search {
-    position: relative;
-    top: 5vh
-}
-
-body {
-    background-color: rgb(0, 0, 2);
-}
-
-

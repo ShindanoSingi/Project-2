@@ -4,8 +4,7 @@ h1 {
     font-size: 3vw;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: -3vh;
+    transform: translateY(-5vh);
 }
 
 thead {
@@ -84,22 +83,16 @@ thead {
     background-image: url("images/newHomeImage.png");
     background-repeat: no-repeat;
     background-position: center center;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     height: 100vh;
-    margin: 0 1vw;
+    margin: 0 3vw;
 }
 
 .body {
-    transform: translateY(25vh);
-}
-
-.trash {
-    transform: translate(1.2vw, -4vh);
+    transform: translateY(35vh);
 }
 
 body {

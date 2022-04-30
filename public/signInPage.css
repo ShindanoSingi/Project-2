@@ -1,572 +1,66 @@
 /* Source: https://stackoverflow.com/questions/42415141/what-is-the-media-query-for-large-desktops */
 
-
-/* For 4K display */
-
-@media screen and (max-width: 3840px) {
-    /* Style h1 */
-    h1 {
-        font-size: 4vw;
-        text-align: center;
-        color: rgb(236, 153, 3);
-        transform: translateY(10vh);
-    }
-
-    /* Style email label */
-    #emailLabel {
-        transform: translateX(-15.5vw);
-    }
-
-    /* Style labels */
-    .label {
-        font-size: 3vw;
-        color: rgb(236, 153, 3);
-        transform: translate(-13.5vw);
-    }
-
-    /* E-mail and password input boxes  */
-    #email, #password {
-        font-size: 3vw;
-        width: 40vw;
-        border-radius: 60px;
-        padding-left: 3vw;
-    }
-
-    /* Style the yes icon */
-    div>.eye {
-        font-size: 3vw;
-        color: rgb(183, 138, 67);
-        position: relative;
-        transform: translate(36vw, -6.2vh);
-        
-    }
-
-    /* Style submit button */
-    .submitButton {
-        font-size: 3vw;
-        background-color: rgb(22, 11, 96);
-    }
-
-    /* Style cancel button */
-    .cancelButton {
-        font-size: 3vw;
-        background-color: rgb(236, 153, 3);
-    }
-
-    /* Style both submit and cancel buttons */
-    .submitAndCancelButtons {
-        display: flex;
-        justify-content: center;
-        gap: 3vw;
-        transform: translateY(2vh);
-    }
-
-    .image {
-        background-image: url("images/newHomeImage.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .containerParent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 15vh;
-        font-size: 3vw;
-    }
-
-    /* Forget links */
-    .forget {
-        color: rgb(236, 153, 3);
-        ;
-    }
-
-    /* container for forgot email and password */
-    #forgetContainer {
-        display: grid;
-        justify-content: center;
-        transform: translateY(5vh);
-        font-size: 3vw;
-    }
-
-    body {
-        background-color: rgb(98, 92, 88);
-    } 
-}
-
-
-/* For Projector */
-
-@media screen and (max-width: 1920px) {
-    /* Style h1 */
-    h1 {
-        font-size: 4vw;
-        text-align: center;
-        color: rgb(236, 153, 3);
-        transform: translateY(10vh);
-    }
-
-    /* Style email label */
-    #emailLabel {
-        transform: translateX(-15.5vw);
-    }
-
-    /* Style labels */
-    .label {
-        font-size: 3vw;
-        color: rgb(236, 153, 3);
-        transform: translate(-13.5vw);
-    }
-
-    /* E-mail and password input boxes  */
-    #email, #password {
-        font-size: 3vw;
-        width: 40vw;
-        border-radius: 30px;
-        padding-left: 3vw;
-    }
-
-    /* Style the yes icon */
-    div>.eye {
-        font-size: 3vw;
-        color: rgb(183, 138, 67);
-        transform: translate(35.4vw, -6.7vh);
-    }
-
-    /* Style submit button */
-    .submitButton {
-        font-size: 3vw;
-        background-color: rgb(22, 11, 96);
-    }
-
-    /* Style cancel button */
-    .cancelButton {
-        font-size: 3vw;
-        background-color: rgb(236, 153, 3);
-    }
-
-    /* Style both submit and cancel buttons */
-    .submitAndCancelButtons {
-        display: flex;
-        justify-content: center;
-        gap: 3vw;
-        transform: translateY(2vh);
-    }
-
-    .image {
-        background-image: url("images/newHomeImage.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .containerParent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 15vh;
-        font-size: 3vw;
-    }
-
-    /* Forget links */
-    .forget {
-        color: rgb(236, 153, 3);
-        ;
-    }
-
-    /* container for forgot email and password */
-    #forgetContainer {
-        display: grid;
-        justify-content: center;
-        transform: translateY(5vh);
-        font-size: 3vw;
-    }
-
-    body {
-        background-color: rgb(98, 92, 88);
-    }
-}
-
-
-/* For Big TV's (HD Screens */
-
-@media screen and (max-width: 1280px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
 
     /* Style h1 */
     h1 {
-        font-size: 5vw;
+        font-size: 8vw;
         text-align: center;
-        color: rgb(236, 153, 3);
-        transform: translateY(10vh);
-    }
-
-    /* Style email label */
-    #emailLabel {
-        transform: translateX(-19vw);
-    }
-
-    /* Style labels */
-    .label {
-        font-size: 4vw;
-        color: rgb(236, 153, 3);
-        transform: translate(-16vw);
-    }
-
-    /* E-mail and password input boxes  */
-    #email, #password {
-        font-size: 3vw;
-        width: 50vw;
-        border-radius: 30px;
-        padding-left: 3vw;
-    }
-
-    /* Style the eye icon */
-    div>.eye {
-        font-size: 3vw;
-        color: rgb(183, 138, 67);
-        transform: translate(44vw, -7vh);
-    }
-
-    /* Style submit button */
-    .submitButton {
-        font-size: 3vw;
-        background-color: rgb(22, 11, 96);
-    }
-
-    /* Style cancel button */
-    .cancelButton {
-        font-size: 3vw;
-        background-color: rgb(236, 153, 3);
-    }
-
-    /* Style both submit and cancel buttons */
-    .submitAndCancelButtons {
-        display: flex;
-        justify-content: center;
-        gap: 3vw;
-        transform: translateY(2vh);
-    }
-
-    .image {
-        background-image: url("images/newHomeImage.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .containerParent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 15vh;
-        font-size: 3vw;
-    }
-
-    /* Forget links */
-    .forget {
-        color: rgb(236, 153, 3);
-        ;
-    }
-
-    /* container for forgot email and password */
-    #forgetContainer {
-        display: grid;
-        justify-content: center;
-        transform: translateY(5vh);
-        font-size: 3vw;
-    }
-
-    body {
-        background-color: rgb(98, 92, 88);
-    }
-}
-
-/* For large Laptops */
-
-@media screen and (max-width: 992vw) {
-
-    /* Style h1 */
-    h1 {
-        font-size: 4vw;
-        text-align: center;
-        color: rgb(236, 153, 3);
-        transform: translateY(10vh);
-    }
-
-    /* Style email label */
-    #emailLabel {
-        transform: translateX(-25.3vw);
-    }
-
-    /* Style labels */
-    .label {
-        font-size: 3.5vw;
-        color: rgb(236, 153, 3);
-        transform: translate(-22.8vw);
-    }
-
-    /* E-mail and password input boxes  */
-    #email, #password {
-        font-size: 3.5vw;
-        width: 60vw;
-        border-radius: 40px;
-        padding-left: 3vw;
-    }
-
-    /* Style the yes icon */
-    div>.eye {
-        font-size: 3vw;
-        color: rgb(183, 138, 67);
-        transform: translate(53vw, -5.9vh);
-    }
-
-    /* Style submit button */
-    .submitButton {
-        font-size: 3vw;
-        background-color: rgb(22, 11, 96);
-    }
-
-    /* Style cancel button */
-    .cancelButton {
-        font-size: 3vw;
-        background-color: rgb(236, 153, 3);
-    }
-
-    /* Style both submit and cancel buttons */
-    .submitAndCancelButtons {
-        display: flex;
-        justify-content: center;
-        gap: 3vw;
-        transform: translateY(5vh);
-    }
-
-    .image {
-        background-image: url("images/newHomeImage.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .containerParent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 20vh;
-        font-size: 3vw;
-    }
-
-    /* Forget links */
-    .forget {
-        color: rgb(236, 153, 3);
-        ;
-    }
-
-    /* container for forgot email and password */
-    #forgetContainer {
-        display: grid;
-        justify-content: center;
-        transform: translateY(10vh);
-        font-size: 3vw;
-    }
-
-    body {
-        background-color: rgb(98, 92, 88);
-    }
-}
-
-/* iPads, Tablets */
-
-@media screen and (max-width: 768px) {
-
-    /* Style h1 */
-    h1 {
-        font-size: 5vw;
-        text-align: center;
-        color: rgb(236, 153, 3);
+        color: rgb(246, 154, 4);
         transform: translateY(15vh);
     }
 
     /* Style email label */
     #emailLabel {
-        transform: translateX(-23vw);
-    }
-
-    /* E-mail and password input boxes  */
-    #email, #password {
-        font-size: 3.5vw;
-        width: 60vw;
-        border-radius: 25px;
-        padding-left: 3vw;
-    }
-
-    /* Style labels */
-    .label {
-        font-size: 4vw;
-        color: rgb(236, 153, 3);
-        transform: translate(-19vw);
-    }
-
-    /* Style the yes icon */
-    div>.eye {
-        font-size: 3.5vw;
-        color: rgb(183, 138, 67);
-        transform: translate(51vw, -4.5vh);
-    }
-
-    /* Style submit button */
-    .submitButton {
-        font-size: 3.5vw;
-        background-color: rgb(22, 11, 96);
-    }
-
-    /* Style cancel button */
-    .cancelButton {
-        font-size: 3.5vw;
-        background-color: rgb(236, 153, 3);
-    }
-
-    /* Style both submit and cancel buttons */
-    .submitAndCancelButtons {
-        display: flex;
-        justify-content: center;
-        gap: 3vw;
-        transform: translateY(5vh);
-    }
-
-    .image {
-        background-image: url("images/newHomeImage.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .containerParent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 20vh;
-        font-size: 3vw;
-    }
-
-    /* Forget links */
-    .forget {
-        color: rgb(236, 153, 3);
-        ;
-    }
-
-    /* container for forgot email and password */
-    #forgetContainer {
-        display: grid;
-        justify-content: center;
-        transform: translateY(10vh);
-        font-size: 3.5vw;
-    }
-
-    body {
-        background-color: rgb(98, 92, 88);
-    }
-
-}
-
-
-
-
-/* Mobile devices */
-
-@media screen and (max-width: 480px) {
-
-    /* Style h1 */
-    h1 {
-        font-size: 7vw;
-        text-align: center;
-        color: rgb(236, 153, 3);
-        transform: translateY(20vh);
-    }
-
-    /* Style email label */
-    #emailLabel {
-        font-size: 6vw;
+        font-size: 1.5vw;
         transform: translateX(-31vw);
     }
 
     /* Style labels */
     .label {
-        font-size: 6vw;
-        color: rgb(236, 153, 3);
-        transform: translate(-26.8vw);
+        font-size: 1.5vw;
+        color: rgb(246, 154, 4);
+        transform: translateX(-28vw);
     }
 
     /* Style the yes icon */
-    div>.eye {
-        font-size: 5vw;
-        color: rgb(183, 138, 67);
-        transform: translate(68vw, -3.6vh);
+    .eye {
+        font-size: 1.5vw;
+        color: rgb(144, 144, 67);
+        transform: translate(1095%, -130%);
     }
 
     /* E-mail and password input boxes  */
-    #email, #password {
-        font-size: 5vw;
+    #email,
+    #password {
+        font-size: 1.5vw;
         width: 80vw;
-        border-radius: 20px;
-        padding-left: 3vw;
-    }
-
-    /* Contains Password fields */
-    #passwordField {
-        display: flex;
-        align-items: center;
-        width: 60vw;
-        display: grid;
-        justify-content: center;
-        margin: 0 auto;
+        border-radius: 20vw;
+        padding-left: 1.5vw;
     }
 
     /* Style submit button */
     .submitButton {
-        font-size: 5vw;
+        font-size: 1.5vw;
         background-color: rgb(22, 11, 96);
     }
 
     /* Style cancel button */
     .cancelButton {
-        font-size: 5vw;
-        background-color: rgb(236, 153, 3);
+        font-size: 1.5vw;
+        background-color: rgb(246, 154, 4);
     }
 
     /* Style both submit and cancel buttons */
     .submitAndCancelButtons {
         display: flex;
         justify-content: center;
-        gap: 3vw;
+        gap: 1.5vw;
         transform: translateY(5vh);
     }
 
+    /* Style background image */
     .image {
         background-image: url("images/newHomeImage.png");
         background-repeat: no-repeat;
@@ -586,29 +80,493 @@
         margin-top: 25vh;
     }
 
-    /* Forget links */
-    .forget {
-        font-size: 5vw;
-        color: rgb(236, 153, 3);
-        ;
-    }
-
-    /* container for forgot email and password */
-    #forgetContainer {
-        display: grid;
-        justify-content: center;
-        transform: translateY(10vh);
-    }
-
-    .container{
-        display: grid;
-        justify-content: center;
-        transform: translate(15vw, 15vh);
-    }
-
     body {
-        font-size: 5vw;
-        background-color: rgb(98, 92, 88);
+        background-color: rgb(94, 92, 44);
+    }
+
+
+    #body {
+        /* transform: translate(1.5vw, 5vh); */
+        display: grid;
+        justify-content: center;
     }
 
 }
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+
+       /* Style h1 */
+       h1 {
+        font-size: 8vw;
+        text-align: center;
+        color: rgb(246, 154, 4);
+        transform: translateY(15vh);
+    }
+
+    /* Style email label */
+    #emailLabel {
+        font-size: 1.5vw;
+        transform: translateX(-31vw);
+    }
+
+    /* Style labels */
+    .label {
+        font-size: 1.5vw;
+        color: rgb(246, 154, 4);
+        transform: translateX(-28vw);
+    }
+
+    /* Style the yes icon */
+    .eye {
+        font-size: 1.5vw;
+        color: rgb(144, 144, 67);
+        transform: translate(1095%, -130%);
+    }
+
+    /* E-mail and password input boxes  */
+    #email,
+    #password {
+        font-size: 1.5vw;
+        width: 80vw;
+        border-radius: 20vw;
+        padding-left: 1.5vw;
+    }
+
+    /* Style submit button */
+    .submitButton {
+        font-size: 1.5vw;
+        background-color: rgb(22, 11, 96);
+    }
+
+    /* Style cancel button */
+    .cancelButton {
+        font-size: 1.5vw;
+        background-color: rgb(246, 154, 4);
+    }
+
+    /* Style both submit and cancel buttons */
+    .submitAndCancelButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5vw;
+        transform: translateY(5vh);
+    }
+
+    /* Style background image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .containerParent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
+    body {
+        background-color: rgb(94, 92, 44);
+    }
+
+
+    #body {
+        /* transform: translate(1.5vw, 5vh); */
+        display: grid;
+        justify-content: center;
+    }
+  
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+
+       /* Style h1 */
+       h1 {
+        font-size: 8vw;
+        text-align: center;
+        color: rgb(246, 154, 4);
+        transform: translateY(15vh);
+    }
+
+    /* Style email label */
+    #emailLabel {
+        font-size: 1.5vw;
+        transform: translateX(-31vw);
+    }
+
+    /* Style labels */
+    .label {
+        font-size: 1.5vw;
+        color: rgb(246, 154, 4);
+        transform: translateX(-28vw);
+    }
+
+    /* Style the yes icon */
+    .eye {
+        font-size: 1.5vw;
+        color: rgb(144, 144, 67);
+        transform: translate(1095%, -130%);
+    }
+
+    /* E-mail and password input boxes  */
+    #email,
+    #password {
+        font-size: 1.5vw;
+        width: 80vw;
+        border-radius: 20vw;
+        padding-left: 1.5vw;
+    }
+
+    /* Style submit button */
+    .submitButton {
+        font-size: 1.5vw;
+        background-color: rgb(22, 11, 96);
+    }
+
+    /* Style cancel button */
+    .cancelButton {
+        font-size: 1.5vw;
+        background-color: rgb(246, 154, 4);
+    }
+
+    /* Style both submit and cancel buttons */
+    .submitAndCancelButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5vw;
+        transform: translateY(5vh);
+    }
+
+    /* Style background image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .containerParent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
+    body {
+        background-color: rgb(94, 92, 44);
+    }
+
+
+    #body {
+        /* transform: translate(1.5vw, 5vh); */
+        display: grid;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+
+       /* Style h1 */
+       h1 {
+        font-size: 7vw;
+        text-align: center;
+        color: rgb(246, 154, 4);
+        transform: translateY(15vh);
+    }
+
+    /* Style email label */
+    #emailLabel {
+        font-size: 1.5vw;
+        transform: translateX(-31.5vw);
+    }
+
+    /* Style labels */
+    .label {
+        font-size: 1.5vw;
+        color: rgb(246, 154, 4);
+        transform: translateX(-30vw);
+    }
+
+    /* Style the yes icon */
+    .eye {
+        font-size: 1.5vw;
+        color: rgb(144, 144, 67);
+        transform: translate(1445%, -130%);
+    }
+
+    /* E-mail and password input boxes  */
+    #email,
+    #password {
+        font-size: 1.5vw;
+        width: 80vw;
+        border-radius: 20vw;
+        padding-left: 1.5vw;
+    }
+
+    /* Style submit button */
+    .submitButton {
+        font-size: 1.5vw;
+        background-color: rgb(22, 11, 96);
+    }
+
+    /* Style cancel button */
+    .cancelButton {
+        font-size: 1.5vw;
+        background-color: rgb(246, 154, 4);
+    }
+
+    /* Style both submit and cancel buttons */
+    .submitAndCancelButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5vw;
+        transform: translateY(5vh);
+    }
+
+    /* Style background image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .containerParent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
+    body {
+        background-color: rgb(94, 92, 44);
+    }
+
+
+    #body {
+        /* transform: translate(1.5vw, 5vh); */
+        display: grid;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+
+     /* Style h1 */
+     h1 {
+        font-size: 6vw;
+        text-align: center;
+        color: rgb(246, 154, 4);
+        transform: translateY(15vh);
+    }
+
+    /* Style email label */
+    #emailLabel {
+        font-size: 1.5vw;
+        transform: translateX(-25vw);
+    }
+
+    /* Style labels */
+    .label {
+        font-size: 1.5vw;
+        color: rgb(246, 154, 4);
+        transform: translateX(-21.5vw);
+    }
+
+    /* Style the yes icon */
+    .eye {
+        font-size: 1.5vw;
+        color: rgb(144, 144, 67);
+        transform: translate(1445%, -130%);
+    }
+
+    /* E-mail and password input boxes  */
+    #email,
+    #password {
+        font-size: 1.5vw;
+        width: 60vw;
+        border-radius: 20vw;
+        padding-left: 1.5vw;
+    }
+
+    /* Style submit button */
+    .submitButton {
+        font-size: 1.5vw;
+        background-color: rgb(22, 11, 96);
+    }
+
+    /* Style cancel button */
+    .cancelButton {
+        font-size: 1.5vw;
+        background-color: rgb(246, 154, 4);
+    }
+
+    /* Style both submit and cancel buttons */
+    .submitAndCancelButtons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5vw;
+        transform: translateY(5vh);
+    }
+
+    /* Style background image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .containerParent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
+    body {
+        background-color: rgb(94, 92, 44);
+    }
+
+
+    #body {
+        /* transform: translate(1.5vw, 5vh); */
+        display: grid;
+        justify-content: center;
+    }
+
+}
+
+
+/* For Big TV's (HD Screens */
+@media only screen and (max-width: 1280px){
+
+/* Style h1 */
+h1 {
+    font-size: 6vw;
+    text-align: center;
+    color: rgb(246, 154, 4);
+    transform: translateY(15vh);
+}
+
+/* Style email label */
+#emailLabel {
+    font-size: 4vw;
+    transform: translateX(-23.5vw);
+}
+
+/* Style labels */
+.label {
+    font-size: 4vw;
+    color: rgb(246, 154, 4);
+    transform: translateX(-21vw);
+}
+
+/* Style the yes icon */
+.eye {
+    font-size: 3vw;
+    color: rgb(144, 144, 67);
+    transform: translate(1445%, -130%);
+}
+
+/* E-mail and password input boxes  */
+#email,
+#password {
+    font-size: 3vw;
+    width: 60vw;
+    border-radius: 20vw;
+    padding-left: 1.5vw;
+}
+
+/* Style submit button */
+.submitButton {
+    font-size: 3vw;
+    background-color: rgb(22, 11, 96);
+}
+
+/* Style cancel button */
+.cancelButton {
+    font-size: 3vw;
+    background-color: rgb(246, 154, 4);
+}
+
+/* Style both submit and cancel buttons */
+.submitAndCancelButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+    transform: translateY(5vh);
+}
+
+/* Style background image */
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+
+body {
+    background-color: rgb(94, 92, 44);
+}
+
+
+#body {
+    /* transform: translate(1.5vw, 5vh); */
+    display: grid;
+    justify-content: center;
+}
+
+
+}
+
+

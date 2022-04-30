@@ -17,11 +17,9 @@
 
 <body>
 
-  <div class="bodyContainer">
-
     <form class="form container" action="/signIn" method="POST">
 
-      <div class="body">
+      <div id="body">
 
         <h1>Please sign in.</h1>
 
@@ -39,7 +37,7 @@
               document.querySelector('#password').type = 'text';
 
               // Wait for 0.5 second, then Call the function "hidePassword" function
-              setTimeout(func, 500)
+              setTimeout(func, 1000)
             }
 
             // Set password to password type after a second
@@ -70,8 +68,7 @@
       </div>
 
     </form>
-
-  </div>
+    
 </body>
 
 </html>

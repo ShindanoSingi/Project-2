@@ -40,7 +40,7 @@ https://developers.google.com/youtube/v3/getting-started?authuser=1
 // Generate a new API_KEY
 https://console.cloud.google.com/projectcreate?previousPage=%2Fapis%2Fdashboard%3Fauthuser%3D1%26project%3Dmy-project-25894&organizationId=0&authuser=1
 
-API Key:    AIzaSyBI2VKuOz2CdgJBXUBfnmyPy7f6fHzwYO8
+
 API Key:    AIzaSyA9ZcRubHdOkYqfjF3MVPhCLsp_fMgt1Ug
 API Key:    AIzaSyDwWLgzl7aMOyqJ-IZr4FyPi_Y5x2eKNgw
 API Key:    AIzaSyDncfIpqQpKKuqaIRRMXLNyJt9bKmd0XHY
@@ -1454,3 +1454,1368 @@ router.post("/signIn", (req, res) => {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+For 4K display
+
+@media screen and (max-width: 3840px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-15vh);
+    }
+
+    .h1 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 3vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 2.5vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 2.5vw;
+        transform: translateY(-2vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+/* For Projector */
+
+@media screen and (max-width: 1920px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-16vh);
+    }
+
+    .h1 {
+        font-size: 3vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-18vhvh);
+    }
+
+    .h2 {
+        font-size: 2.5vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 2.5vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 2.5vw;
+        transform: translateY(-8vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-19vh);
+    }
+
+    .h1 {
+        font-size: 5vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 4vw;
+        transform: translateY(-5vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+/* For large laptops */
+
+@media screen and (max-width: 992px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-15vh);
+    }
+
+    .h1 {
+        font-size: 6vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 4vw;
+       transform: translateY(-8vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+
+/* iPads, Tablets */
+
+@media screen and (max-width: 768px) {
+
+    /* the 2 h1 */
+    .header {
+        color: rgba(52, 52, 237, 0.983);
+        transform: translateY(-17vh);
+    }
+
+    .h1 {
+        font-size: 6vw;
+        text-align: center;
+        padding: 0vh 1vw;
+        margin: 15rem 3rem 0rem 3rem;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-3vh);
+    }
+
+    .h2 {
+        font-size: 4vw;
+        text-align: center;
+        padding: 0vh 4vw;
+        transform: translateY(-3vh);
+    }
+
+    .signUp {
+        font-size: 4vw;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0rem 30vw;
+    }
+
+    /* Already signed up link */
+    .signIn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Already signed up link and he sign up button */
+    .signUpAndIn {
+        font-size: 4vw;
+        transform: translateY(-10vh);
+    }
+
+
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    body {
+        font-size: 1.4vw;
+        background-color: rgb(166, 112, 41);
+    }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+}
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+  
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+
+}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+
+}
+
+
+/* For Big TV's (HD Screens */
+@media only screen and (max-width: 1280px){}
+
+
+
+/* For Projector */
+@media screen and (max-width: 1920px) {}
+
+
+
+/* For 4K display */
+@media screen and (max-width: 3840px) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){}
+
+
+
+
+
+/* Style email label */
+#emailLabel {
+    font-size: 10vw;
+    transform: translateX(-44vw);
+}
+
+/* Style labels */
+.label {
+    font-size: 10vw;
+    color: rgb(236, 153, 3);
+    transform: translate(-37vw);
+}
+
+/* Style the yes icon */
+.eye {
+    font-size: 7vw;
+    color: rgb(183, 138, 67);
+    transform: translate(103vw, -7.5vh);
+}
+
+/* E-mail and password input boxes  */
+#email, #password {
+    font-size: 8vw;
+    width: 120vw;
+    border-radius: 20vw;
+    padding-left: 6vw;
+}
+
+/* Contains Password fields */
+#passwordField {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Style submit button */
+.submitButton {
+    font-size: 8vw;
+    background-color: rgb(22, 11, 96);
+}
+
+/* Style cancel button */
+.cancelButton {
+    font-size: 8vw;
+    background-color: rgb(236, 153, 3);
+}
+
+/* Style both submit and cancel buttons */
+.submitAndCancelButtons {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    transform: translateY(5vh);
+}
+
+.image {
+    background-image: url("images/newHomeImage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+
+/* container for forgot email and password */
+#forgetContainer {
+    display: grid;
+    justify-content: center;
+    transform: translateY(10vh);
+}
+
+body {
+    font-size: 8vw;
+    background-color: rgb(98, 92, 88);
+}
+
+#body{
+    max-width: 300vw;
+    transform: translate(35vw, 10vh);
+    height: 100vh;
+    margin-top: 25vh;
+}
+
+    .containerParent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
+    body {
+        font-size: 2.5vw;
+        background-color: rgb(94, 92, 44);
+    }
+
+    #body{
+        transform: translate(15.5vw, 4vh);
+        height: 40vh;
+        margin-top: 25vh;
+    }
+  
+}
+
+
+
+
+
+ /* Style h1 */
+    h1 {
+        font-size: 5vw;
+        text-align: center;
+        color: rgb(246, 154, 4);
+        transform: translateY(15vh);
+    }
+
+    /* Style email label */
+    #emailLabel {
+        font-size: 4vw;
+        transform: translateX(-24vw);
+    }
+
+    /* Style labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(246, 154, 4);
+        transform: translate(-21vw);
+    }
+
+    /* Style the yes icon */
+    .eye {
+        font-size: 4vw;
+        color: rgb(144, 144, 67);
+        transform: translate(44vw, -7.5vh);
+    }
+
+    /* E-mail and password input boxes  */
+    #email, #password {
+        font-size: 3vw;
+        width: 60vw;
+        border-radius: 20vw;
+        padding-left: 6vw;
+    }
+
+    /* Contains Password fields */
+    #passwordField {
+        display: flex;
+        align-items: center;
+        width: 40vw;
+        display: grid;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    /* Style submit button */
+    .submitButton {
+        font-size: 2.5vw;
+        background-color: rgb(22, 11, 96);
+    }
+
+    /* Style cancel button */
+    .cancelButton {
+        font-size: 2.5vw;
+        background-color: rgb(246, 154, 4);
+    }
+
+    /* Style both submit and cancel buttons */
+    .submitAndCancelButtons {
+        display: flex;
+        justify-content: center;
+        gap: 4vw;
+        transform: translateY(5vh);
+    }
+
+
+
+
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+
+    /* h1 */
+    h1 {
+        font-size: 4vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-7vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 10vw;
+        font-size: 4vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 10vw;
+        font-size: 4vw;
+        margin: 0 4vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 4vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-1.5vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 3.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-8vh);
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(12vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+}
+
+
+
+
+
+
+
+/* h1 */
+    h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        color: white;
+        transform: translateY(-2vh);
+    }
+
+    /* input boxes */
+    .input {
+        border-radius: 15px;
+    }
+
+    /* Submit button */
+    .submit {
+        border-radius: 15px;
+        font-size: 1.5vw;
+    }
+
+    /* Cancel button */
+    .cancel {
+        border-radius: 15px;
+        font-size: 1.5vw;
+        margin: 0 3vw;
+    }
+
+    /* Labels */
+    .label {
+        font-size: 1.7vw;
+        color: rgb(6, 240, 240);
+        transform: translateX(-0.2vw);
+    }
+
+    /* center all elements in the body */
+    .inputParent {
+        width: 40vw;
+        font-size: 1.5vw;
+        display: grid;
+        justify-content: center;
+        transform: translateY(-15vh);
+    }
+
+      /* Style all question mark icons */
+      .questionMark{
+        color: 50px; 
+        color: rgb(246, 35, 3);
+        transform: translate(10px, -55px);
+
+    }
+
+    /* Reduce the gaps between first and middle name, middle name and last name, last name and email, and email and password */
+    .someInputs{
+        margin-bottom: -10px;
+    }
+
+    /* Backgrounf image */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Submit and cancel buttons */
+    .submitAndCancelButtons {
+        transform: translateY(8vh);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Blink the error message by changing the color from yellow to red */
+    @keyframes errorMsg {
+        from {
+            color: yellow;
+        }
+
+        to {
+            color: red;
+        }
+    }
+
+    /* Format the error message */
+    #error {
+        color: yellow;
+        animation: errorMsg;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        position: relative;
+        top: 2vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    /* Both forgot eamail and password */
+    body {
+        background-image: radial-gradient(circle at center, rgb(4, 44, 10) 0, rgb(2, 22, 4), green 100%)
+    }
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30px;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: -4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        grid-gap: 1vw;
+        transform: translateY(-80vh);
+    }
+
+    img {
+        height: 18vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Small devices (portait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30px;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: -4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        grid-gap: 1vw;
+        transform: translateY(-75vh);
+    }
+
+    img {
+        height: 18vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30px;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 2vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        grid-gap: 1vw;
+        transform: translateY(-65vh);
+    }
+
+    img {
+        height: 18vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Large devices (Laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(30vw, -95.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 4vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1.5vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        gap: 32px;
+        transform: translateY(-55vh);
+        padding: 0 2vw;
+    }
+
+    img {
+        height: 25vh;
+        width: 36vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(31vw, -92.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 3.5vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1.2vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        gap: 32px;
+        transform: translateY(-55vh);
+        padding: 0 2vw;
+    }
+
+    img {
+        height: 20vh;
+        width: 25vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+/* For Big TV's (HD Screens */
+@media only screen and (max-width: 1280px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(31vw, -92.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 3.5vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 0.6vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+    a {
+        font-size: 1.5vw;
+        text-decoration: none;
+        padding: 0 2vw;
+    }
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        gap: 16px;
+        transform: translateY(-55vh);
+        padding: 0 2vw;
+    }
+
+    img {
+        height: 20vh;
+        width: 25vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+/* For Projector */
+@media screen and (max-width: 1920px) {
+
+    /* Search icon */
+    #searchIcon {
+        font-size: 3vw;
+        transform: translate(31vw, -92.8vh);
+        color: rgb(246, 5, 82);
+    }
+
+    /* Style the input box */
+    input {
+        font-size: 3.5vw;
+        width: 70vw;
+        border-radius: 30vw;
+        padding-left: 2vw;
+    }
+
+    /* The globe icon */
+    .image {
+        background-image: url("images/newHomeImage.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20%;
+        background-position-y: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Published time */
+    #publishedTime {
+        color: chartreuse;
+        font-size: 1vw;
+        padding: 0 auto;
+    }
+
+    /* The top part above all videos */
+    .containerSearch {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        top: 5vh;
+    }
+
+
+
+    /* This contains all videos */
+    .container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(550px, max-content));
+        grid-gap: 16px;
+
+
+
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+        column-gap: 100px;
+        transform: translateY(-55vh);
+        padding: 0 5vw; */
+    }
+
+    img {
+        height: 25vh;
+        width: 25vw;
+    }
+
+    body {
+        background-color: rgb(0, 0, 2);
+    }
+
+}
+
+
+
+
+
+
+AIzaSyB1g2XrkVWlXCZySjdoGaOhCAqzDNd3V2s
+
+AIzaSyDn3Tk8oIcTDjHzcdW9Zlz82saHoAQWEa0
+AIzaSyDHg7Ik-cFjDt-zI9qjhdEazRohN4I2dmo
